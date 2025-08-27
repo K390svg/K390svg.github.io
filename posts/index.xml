@@ -1,136 +1,168 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Mercury's Blogs</title><link>https://K390svg.github.io/posts/</link><description>Recent content in Posts on Mercury's Blogs</description><generator>Hugo -- 0.148.2</generator><language>en-us</language><lastBuildDate>Wed, 27 Aug 2025 09:00:00 +0800</lastBuildDate><atom:link href="https://K390svg.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>2025_webster2025.md</title><link>https://K390svg.github.io/posts/2025_webster2025/</link><pubDate>Wed, 27 Aug 2025 09:00:00 +0800</pubDate><guid>https://K390svg.github.io/posts/2025_webster2025/</guid><description>&lt;h1 id="paper-review-statistical-characteristics-of-nighttime-ulf-waves-observed-on-the-surface-of-mars-by-insight">Paper Review: Statistical Characteristics of Nighttime ULF Waves Observed on the Surface of Mars by InSight&lt;/h1>
-&lt;p>&lt;strong>Authors:&lt;/strong> Webster et al. (2025)&lt;br>
-&lt;strong>DOI:&lt;/strong> &lt;a href="https://doi.org/10.1029/2024JA033292">https://doi.org/10.1029/2024JA033292&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>Understanding the nature of magnetic pulsations on Mars can contribute to the knowledge needed for electromagnetic sounding (EMS) of the planetary interior&lt;/p>&lt;/blockquote>
-&lt;p>观测和理解火星表面磁脉动的性质，有助于进行火星内部的 EMS 研究。ULF 频率的电磁波可以穿透到地壳和地幔中一定深度，它们在穿透时会与地下的导电结构相互作用并被改变。
-通过反演这些变化，可以重建行星内部的电导率剖面。&lt;/p>
-&lt;h2 id="magnetic-pulsations-on-mars">Magnetic Pulsations on Mars&lt;/h2>
-&lt;h3 id="波动的时间特性分类">波动的时间特性分类&lt;/h3>
-&lt;p>各种等离子体波动通常可根据时间演化特征划分为 连续型 (Pc) 和 脉冲型 (Pi)。&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>连续型脉动 (Pc, Continuous pulsations)&lt;/strong>：窄带、准周期、可持续数分钟到数小时。&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>名称&lt;/th>
-&lt;th>频率范围&lt;/th>
-&lt;th>周期&lt;/th>
-&lt;th>典型物理来源/机制&lt;/th>
-&lt;th>常见环境&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>Pc1&lt;/strong>&lt;/td>
-&lt;td>0.2–5 Hz&lt;/td>
-&lt;td>0.2–5 s&lt;/td>
-&lt;td>离子回旋不稳定、环/束分布触发，通常与 EMIC (ElectroMagnetic Ion Cyclotron) 波对应&lt;/td>
-&lt;td>磁层内部、激波上游、离子注入区&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>Pc2&lt;/strong>&lt;/td>
-&lt;td>0.1–0.2 Hz&lt;/td>
-&lt;td>5–10 s&lt;/td>
-&lt;td>与质子或杂质离子的回旋频率相关，常与 EMIC 亚波段有关&lt;/td>
-&lt;td>磁层内部&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>Pc3&lt;/strong>&lt;/td>
-&lt;td>22–100 mHz&lt;/td>
-&lt;td>10–45 s&lt;/td>
-&lt;td>太阳风激发的 &lt;strong>上游波&lt;/strong>（反射离子驱动）&lt;/td>
-&lt;td>激波上游、磁鞘区、地表可观测&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>Pc4&lt;/strong>&lt;/td>
-&lt;td>7–22 mHz&lt;/td>
-&lt;td>45–150 s&lt;/td>
-&lt;td>磁层内的场线共振 (Field Line Resonance, FLR)，受太阳风动压扰动驱动&lt;/td>
-&lt;td>磁层中-高纬度，地表可见&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>Pc5&lt;/strong>&lt;/td>
-&lt;td>1.7–7 mHz&lt;/td>
-&lt;td>150–600 s&lt;/td>
-&lt;td>大尺度波动，常与 Kelvin–Helmholtz 不稳定性、磁尾扰动、行星波导有关&lt;/td>
-&lt;td>磁层边界、尾区、极区电离层&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;strong>脉冲型脉动 (Pi, Irregular pulsations)&lt;/strong>：宽带、非周期性、脉冲/突发式。&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>名称&lt;/th>
-&lt;th>频率范围&lt;/th>
-&lt;th>周期&lt;/th>
-&lt;th>典型物理来源/机制&lt;/th>
-&lt;th>常见环境&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;strong>Pi1&lt;/strong>&lt;/td>
-&lt;td>1–40 s&lt;/td>
-&lt;td>宽带、高频突发&lt;/td>
-&lt;td>磁层爆发性过程（亚暴爆发、磁重联、电流片扰动）&lt;/td>
-&lt;td>磁尾、极区地表&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>Pi2&lt;/strong>&lt;/td>
-&lt;td>40–150 s&lt;/td>
-&lt;td>低频突发&lt;/td>
-&lt;td>与亚暴开始相关，极区磁场扰动向全球传播&lt;/td>
-&lt;td>磁层尾区、极光区、地表全球可见&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;hr>
-&lt;p>&lt;strong>特征与判别&lt;/strong>&lt;/p></description></item><item><title>KaTeX Test</title><link>https://K390svg.github.io/posts/latex-test/</link><pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate><guid>https://K390svg.github.io/posts/latex-test/</guid><description>&lt;p>Here is an inline formula: $E=mc^2$&lt;/p>
-&lt;p>Here is a display formula:&lt;/p>
-&lt;p>$$
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Mercury&#39;s Blogs</title>
+    <link>https://K390svg.github.io/posts/</link>
+    <description>Recent content in Posts on Mercury&#39;s Blogs</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Aug 2025 09:00:00 +0800</lastBuildDate>
+    <atom:link href="https://K390svg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025_webster2025.md</title>
+      <link>https://K390svg.github.io/posts/2025_webster2025/</link>
+      <pubDate>Wed, 27 Aug 2025 09:00:00 +0800</pubDate>
+      <guid>https://K390svg.github.io/posts/2025_webster2025/</guid>
+      <description>&lt;h1 id=&#34;paper-review-statistical-characteristics-of-nighttime-ulf-waves-observed-on-the-surface-of-mars-by-insight&#34;&gt;Paper Review: Statistical Characteristics of Nighttime ULF Waves Observed on the Surface of Mars by InSight&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Webster et al. (2025)&lt;br&gt;
+&lt;strong&gt;DOI:&lt;/strong&gt; &lt;a href=&#34;https://doi.org/10.1029/2024JA033292&#34;&gt;https://doi.org/10.1029/2024JA033292&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Understanding the nature of magnetic pulsations on Mars can contribute to the knowledge needed for electromagnetic sounding (EMS) of the planetary interior&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;观测和理解火星表面磁脉动的性质，有助于进行火星内部的 EMS 研究。ULF 频率的电磁波可以穿透到地壳和地幔中一定深度，它们在穿透时会与地下的导电结构相互作用并被改变。
+通过反演这些变化，可以重建行星内部的电导率剖面。&lt;/p&gt;
+&lt;h2 id=&#34;magnetic-pulsations-on-mars&#34;&gt;Magnetic Pulsations on Mars&lt;/h2&gt;
+&lt;h3 id=&#34;波动的时间特性分类&#34;&gt;波动的时间特性分类&lt;/h3&gt;
+&lt;p&gt;各种等离子体波动通常可根据时间演化特征划分为 连续型 (Pc) 和 脉冲型 (Pi)。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;连续型脉动 (Pc, Continuous pulsations)&lt;/strong&gt;：窄带、准周期、可持续数分钟到数小时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;名称&lt;/th&gt;
+          &lt;th&gt;频率范围&lt;/th&gt;
+          &lt;th&gt;周期&lt;/th&gt;
+          &lt;th&gt;典型物理来源/机制&lt;/th&gt;
+          &lt;th&gt;常见环境&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pc1&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0.2–5 Hz&lt;/td&gt;
+          &lt;td&gt;0.2–5 s&lt;/td&gt;
+          &lt;td&gt;离子回旋不稳定、环/束分布触发，通常与 EMIC (ElectroMagnetic Ion Cyclotron) 波对应&lt;/td&gt;
+          &lt;td&gt;磁层内部、激波上游、离子注入区&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pc2&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;0.1–0.2 Hz&lt;/td&gt;
+          &lt;td&gt;5–10 s&lt;/td&gt;
+          &lt;td&gt;与质子或杂质离子的回旋频率相关，常与 EMIC 亚波段有关&lt;/td&gt;
+          &lt;td&gt;磁层内部&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pc3&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;22–100 mHz&lt;/td&gt;
+          &lt;td&gt;10–45 s&lt;/td&gt;
+          &lt;td&gt;太阳风激发的 &lt;strong&gt;上游波&lt;/strong&gt;（反射离子驱动）&lt;/td&gt;
+          &lt;td&gt;激波上游、磁鞘区、地表可观测&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pc4&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;7–22 mHz&lt;/td&gt;
+          &lt;td&gt;45–150 s&lt;/td&gt;
+          &lt;td&gt;磁层内的场线共振 (Field Line Resonance, FLR)，受太阳风动压扰动驱动&lt;/td&gt;
+          &lt;td&gt;磁层中-高纬度，地表可见&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pc5&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1.7–7 mHz&lt;/td&gt;
+          &lt;td&gt;150–600 s&lt;/td&gt;
+          &lt;td&gt;大尺度波动，常与 Kelvin–Helmholtz 不稳定性、磁尾扰动、行星波导有关&lt;/td&gt;
+          &lt;td&gt;磁层边界、尾区、极区电离层&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;脉冲型脉动 (Pi, Irregular pulsations)&lt;/strong&gt;：宽带、非周期性、脉冲/突发式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;名称&lt;/th&gt;
+          &lt;th&gt;频率范围&lt;/th&gt;
+          &lt;th&gt;周期&lt;/th&gt;
+          &lt;th&gt;典型物理来源/机制&lt;/th&gt;
+          &lt;th&gt;常见环境&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pi1&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;1–40 s&lt;/td&gt;
+          &lt;td&gt;宽带、高频突发&lt;/td&gt;
+          &lt;td&gt;磁层爆发性过程（亚暴爆发、磁重联、电流片扰动）&lt;/td&gt;
+          &lt;td&gt;磁尾、极区地表&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pi2&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;40–150 s&lt;/td&gt;
+          &lt;td&gt;低频突发&lt;/td&gt;
+          &lt;td&gt;与亚暴开始相关，极区磁场扰动向全球传播&lt;/td&gt;
+          &lt;td&gt;磁层尾区、极光区、地表全球可见&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;特征与判别&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>KaTeX Test</title>
+      <link>https://K390svg.github.io/posts/latex-test/</link>
+      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://K390svg.github.io/posts/latex-test/</guid>
+      <description>&lt;p&gt;Here is an inline formula: $E=mc^2$&lt;/p&gt;
+&lt;p&gt;Here is a display formula:&lt;/p&gt;
+&lt;p&gt;$$
 \mathbf{w} = \frac{1}{2}(\nabla \mathbf{u} - (\nabla \mathbf{u})^T)
-$$&lt;/p></description></item><item><title/><link>https://K390svg.github.io/posts/waves_in_plasma/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://K390svg.github.io/posts/waves_in_plasma/</guid><description>&lt;h1 id="waves-in-plasma">Waves in plasma&lt;/h1>
-&lt;blockquote>
-&lt;p>Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity&lt;/p>
-&lt;p>Whenever a plasma is disturbed, there will be waves!&lt;/p>&lt;/blockquote>
-&lt;!-- raw HTML omitted -->
-&lt;ul>
-&lt;li>
-&lt;p>&lt;a href="#navier-stokes-equations">Navier-Stokes equations&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="#%E5%85%88%E7%A0%94%E7%A9%B6em%E6%B3%A2%E5%86%8D%E8%BF%81%E7%A7%BB%E5%88%B0%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2%E5%9C%A8%E7%9C%9F%E7%A9%BA%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%BC%95%E5%85%A5%E4%BB%8B%E8%B4%A8%E6%95%88%E5%BA%94">EM波 in vaccum&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="#%E5%B9%B3%E9%9D%A2%E6%B3%A2%E5%81%87%E8%AE%BE%E4%B8%8E%E4%BB%A3%E6%95%B0%E5%8C%96%E6%9B%BF%E6%8D%A2">波的色散&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#%E6%B3%A2%E7%9A%84%E6%9E%81%E5%8C%96%E5%81%8F%E6%8C%AF">波的偏振&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="#plasma-waves%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2">等离子体波&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="#dayside">Dayside&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="#nightside">Nightside&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;h2 id="navier-stokes-equations">Navier-Stokes equations&lt;/h2>
-&lt;h4 id="1-流体基本假设">1. 流体基本假设&lt;/h4>
-&lt;p>简化假设：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Newtonian&lt;/strong>：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（&lt;code>μ&lt;/code>）是恒定的，不随剪切力而改变。&lt;/li>
-&lt;li>&lt;strong>Incompressible Fluid&lt;/strong>：流体的密度（&lt;code>ρ&lt;/code>）是恒定的，不随压力或位置变化。这简化了质量守恒方程。&lt;/li>
-&lt;li>&lt;strong>Isothermal Fluid&lt;/strong>：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。&lt;/li>
-&lt;/ul>
-&lt;h4 id="2-质量守恒连续性方程-continuity-equation">2. 质量守恒：连续性方程 (Continuity Equation)&lt;/h4>
-&lt;p>第一条方程是&lt;strong>质量守恒&lt;/strong>的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。
-&lt;code>∇ · u = 0&lt;/code>
-散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。&lt;/p></description></item></channel></rss>
+$$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://K390svg.github.io/posts/waves_in_plasma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://K390svg.github.io/posts/waves_in_plasma/</guid>
+      <description>&lt;h1 id=&#34;waves-in-plasma&#34;&gt;Waves in plasma&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity&lt;/p&gt;
+&lt;p&gt;Whenever a plasma is disturbed, there will be waves!&lt;/p&gt;&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#navier-stokes-equations&#34;&gt;Navier-Stokes equations&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#%E5%85%88%E7%A0%94%E7%A9%B6em%E6%B3%A2%E5%86%8D%E8%BF%81%E7%A7%BB%E5%88%B0%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2%E5%9C%A8%E7%9C%9F%E7%A9%BA%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%BC%95%E5%85%A5%E4%BB%8B%E8%B4%A8%E6%95%88%E5%BA%94&#34;&gt;EM波 in vaccum&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%B9%B3%E9%9D%A2%E6%B3%A2%E5%81%87%E8%AE%BE%E4%B8%8E%E4%BB%A3%E6%95%B0%E5%8C%96%E6%9B%BF%E6%8D%A2&#34;&gt;波的色散&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%B3%A2%E7%9A%84%E6%9E%81%E5%8C%96%E5%81%8F%E6%8C%AF&#34;&gt;波的偏振&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#plasma-waves%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2&#34;&gt;等离子体波&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#dayside&#34;&gt;Dayside&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#nightside&#34;&gt;Nightside&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;navier-stokes-equations&#34;&gt;Navier-Stokes equations&lt;/h2&gt;
+&lt;h4 id=&#34;1-流体基本假设&#34;&gt;1. 流体基本假设&lt;/h4&gt;
+&lt;p&gt;简化假设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Newtonian&lt;/strong&gt;：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（&lt;code&gt;μ&lt;/code&gt;）是恒定的，不随剪切力而改变。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Incompressible Fluid&lt;/strong&gt;：流体的密度（&lt;code&gt;ρ&lt;/code&gt;）是恒定的，不随压力或位置变化。这简化了质量守恒方程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isothermal Fluid&lt;/strong&gt;：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-质量守恒连续性方程-continuity-equation&#34;&gt;2. 质量守恒：连续性方程 (Continuity Equation)&lt;/h4&gt;
+&lt;p&gt;第一条方程是&lt;strong&gt;质量守恒&lt;/strong&gt;的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。
+&lt;code&gt;∇ · u = 0&lt;/code&gt;
+散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
