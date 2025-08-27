@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mercury&#39;s Blogs</title>
+<meta name="keywords" content="">
+<meta name="description" content="Waves in plasma
+
+Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity
+Whenever a plasma is disturbed, there will be waves!
+
+
+
+Navier-Stokes equations
+
+
+EM波 in vaccum
+
+波的色散
+波的偏振
+
+
+
+等离子体波
+
+
+Dayside
+
+
+Nightside
+
+
+
+Navier-Stokes equations
+1. 流体基本假设
+简化假设：
+
+Newtonian：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（μ）是恒定的，不随剪切力而改变。
+Incompressible Fluid：流体的密度（ρ）是恒定的，不随压力或位置变化。这简化了质量守恒方程。
+Isothermal Fluid：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。
+
+2. 质量守恒：连续性方程 (Continuity Equation)
+第一条方程是质量守恒的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。
+∇ · u = 0
+散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。">
+<meta name="author" content="">
+<link rel="canonical" href="https://K390svg.github.io/posts/waves_in_plasma/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.36819bea596090d8b48cf10d9831382996197aa7e4fc86f792f7c08c9ca4d23b.css" integrity="sha256-NoGb6llgkNi0jPENmDE4KZYZeqfk/Ib3kvfAjJyk0js=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://K390svg.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://K390svg.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://K390svg.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://K390svg.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://K390svg.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://K390svg.github.io/posts/waves_in_plasma/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script><meta property="og:url" content="https://K390svg.github.io/posts/waves_in_plasma/">
+  <meta property="og:site_name" content="Mercury&#39;s Blogs">
+  <meta property="og:title" content="Mercury&#39;s Blogs">
+  <meta property="og:description" content="Waves in plasma Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity
+Whenever a plasma is disturbed, there will be waves!
+Navier-Stokes equations
+EM波 in vaccum
+波的色散 波的偏振 等离子体波
+Dayside
+Nightside
+Navier-Stokes equations 1. 流体基本假设 简化假设：
+Newtonian：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（μ）是恒定的，不随剪切力而改变。 Incompressible Fluid：流体的密度（ρ）是恒定的，不随压力或位置变化。这简化了质量守恒方程。 Isothermal Fluid：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。 2. 质量守恒：连续性方程 (Continuity Equation) 第一条方程是质量守恒的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。 ∇ · u = 0 散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="Waves in plasma
+
+Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity
+Whenever a plasma is disturbed, there will be waves!
+
+
+
+Navier-Stokes equations
+
+
+EM波 in vaccum
+
+波的色散
+波的偏振
+
+
+
+等离子体波
+
+
+Dayside
+
+
+Nightside
+
+
+
+Navier-Stokes equations
+1. 流体基本假设
+简化假设：
+
+Newtonian：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（μ）是恒定的，不随剪切力而改变。
+Incompressible Fluid：流体的密度（ρ）是恒定的，不随压力或位置变化。这简化了质量守恒方程。
+Isothermal Fluid：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。
+
+2. 质量守恒：连续性方程 (Continuity Equation)
+第一条方程是质量守恒的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。
+∇ · u = 0
+散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://K390svg.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://K390svg.github.io/posts/waves_in_plasma/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Waves in plasma Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity\nWhenever a plasma is disturbed, there will be waves!\nNavier-Stokes equations\nEM波 in vaccum\n波的色散 波的偏振 等离子体波\nDayside\nNightside\nNavier-Stokes equations 1. 流体基本假设 简化假设：\nNewtonian：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（μ）是恒定的，不随剪切力而改变。 Incompressible Fluid：流体的密度（ρ）是恒定的，不随压力或位置变化。这简化了质量守恒方程。 Isothermal Fluid：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。 2. 质量守恒：连续性方程 (Continuity Equation) 第一条方程是质量守恒的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。 ∇ · u = 0 散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Waves in plasma Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity\nWhenever a plasma is disturbed, there will be waves!\nNavier-Stokes equations\nEM波 in vaccum\n波的色散 波的偏振 等离子体波\nDayside\nNightside\nNavier-Stokes equations 1. 流体基本假设 简化假设：\nNewtonian：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（μ）是恒定的，不随剪切力而改变。 Incompressible Fluid：流体的密度（ρ）是恒定的，不随压力或位置变化。这简化了质量守恒方程。 Isothermal Fluid：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。 2. 质量守恒：连续性方程 (Continuity Equation) 第一条方程是质量守恒的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。 ∇ · u = 0 散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。\n3. 动量守恒：纳维-斯托克斯方程 (Navier-Stokes Equation) 第二条方程是动量守恒在流体中的应用，可以看作是牛顿第二定律 F = ma 在流体individual molecule上的推广。 由于我们考虑的是一个微小的流体体积，我们用密度 ρ 来代替质量 m\n$$\\rho \\frac{du}{dt} = \\sum F$$ $$\\rho \\frac{du}{dt} = -\\nabla p + \\mu \\nabla^2 u + \\mathbf{F}$$\n$\\rho \\frac{du}{dt}$是动量变化率 $-\\nabla p$ 是压力梯度力。流体会从高压区域流向低压区域。这里的 ∇p 是压力场的梯度，这里的负号是是由于压力梯度 ∇p 指向的是压力增长最快的方向，想象一下如果你左边的压力比右边大，你会被从左边推向右边。 $\\mu \\nabla^2 u$ (Viscous Term)： 这是黏性力。它描述了流体内部由于黏度产生的摩擦力。当流体的不同层以不同速度流动时，就会产生黏性剪切力。∇^2 u 是速度场的拉普拉斯算子，描述了速度场的曲率，与黏性力直接相关。 先从二维的速度场 u(x, y)看起，只看一个点 (x, y) 附近的微小流体微团。这个微团的速度梯度矩阵是 ∇u。这里 $u,v$ 分别是 $x,y$ 方向的速度。 $$ \\nabla u = \\begin{bmatrix} \\frac{\\partial u}{\\partial x} \u0026 \\frac{\\partial u}{\\partial y} \\ \\frac{\\partial v}{\\partial x} \u0026 \\frac{\\partial v}{\\partial y} \\end{bmatrix} $$\n对角线项：$\\partial u/\\partial x, \\partial v/\\partial y$，表示沿各自方向的拉伸或压缩（体积/面积改变）。 非对角线项：耦合项，可能表示剪切或者旋转。 由于∇u 矩阵混合了旋转和变形的信息。我们必须把它们分开，因为黏性力只与变形有关，而与刚体旋转无关。\n任何一个方阵 A，都可以唯一地分解为一个对称矩阵 S 和一个反对称矩阵 Q：\n$$A = S + Q $$ $$S = \\frac{1}{2}(A + A^T) $$ $$Q = \\frac{1}{2}(A - A^T)$$\n对称矩阵：$S^T = S$。对称矩阵描述的是拉伸和压缩。 例如，一个沿对角线拉伸的矩阵 $\\begin{pmatrix} 2 \u0026 0 \\ 0 \u0026 3 \\end{pmatrix}$。 反对称矩阵：$Q^T = -Q$。反对称矩阵描述的是旋转。 例如，一个旋转矩阵 $\\begin{pmatrix} 0 \u0026 -1 \\ 1 \u0026 0 \\end{pmatrix}$。 纯旋转 以角速度 $\\omega$ 绕原点旋转：\n$$ u = -\\omega y, \\quad v = \\omega x $$\n得到梯度：\n$$ \\nabla u = \\begin{bmatrix} 0 \u0026 -\\omega \\ \\omega \u0026 0 \\end{bmatrix} $$\n特点：\n对角线 = 0 → 没有任何方向上的拉伸或压缩，物体不被拉长/压缩。 上下互为相反数 → 表示“x 方向的速度随 y 变化”和“y 方向的速度随 x 变化”是成对出现的，刚好形成绕原点的旋转。 对称部分： $$ D = \\tfrac{1}{2}\\Big(\\nabla u + (\\nabla u)^T\\Big) $$ 描述形状改变（拉伸、剪切）。 $$ D = \\tfrac{1}{2} \\left( \\begin{bmatrix} 0 \u0026 -\\omega \\ \\omega \u0026 0 \\end{bmatrix} + \\begin{bmatrix} 0 \u0026 \\omega \\ -\\omega \u0026 0 \\end{bmatrix} \\right) \\begin{bmatrix} 0 \u0026 0 \\ 0 \u0026 0 \\end{bmatrix} $$ 零矩阵 → 没有拉伸或剪切，微团形状不变。\n反对称部分： $$ W = \\tfrac{1}{2}\\Big(\\nabla u - (\\nabla u)^T\\Big) $$\n描述旋转。 $$ W = \\tfrac{1}{2} \\left( \\begin{bmatrix} 0 \u0026 -\\omega \\ \\omega \u0026 0 \\end{bmatrix} \\begin{bmatrix} 0 \u0026 \\omega \\ -\\omega \u0026 0 \\end{bmatrix} \\right) \\begin{bmatrix} 0 \u0026 -\\omega \\ \\omega \u0026 0 \\end{bmatrix} $$ 纯反对称矩阵 → 只包含旋转，表示角速度 $\\omega$。\n现在，我们可以引入下面两个量了\n∇u 的对称部分：应变率张量 $\\mathbf{e} = \\frac{1}{2}(\\nabla \\mathbf{u} + (\\nabla \\mathbf{u})^T)$\n它的对角线元素代表拉伸和压缩。 它的非对角线元素代表剪切变形。 这一部分描述了流体微团如何改变形状，这正是黏性力产生的根源。 ∇u 的反对称部分：涡度张量 $\\mathbf{w} = \\frac{1}{2}(\\nabla \\mathbf{u} - (\\nabla \\mathbf{u})^T)$\n这一部分描述了流体微团的刚体旋转，与流体涡度（vorticity）直接相关。因为刚体旋转本身不会引起内部摩擦，所以黏性力与这一部分无关。 再举一个三维的例子：\n$ \\mathbf{e} = \\begin{pmatrix} \\frac{\\partial u}{\\partial x} \u0026 \\frac{1}{2}(\\frac{\\partial u}{\\partial y} + \\frac{\\partial v}{\\partial x}) \u0026 \\frac{1}{2}(\\frac{\\partial u}{\\partial z} + \\frac{\\partial w}{\\partial x}) \\ \\frac{1}{2}(\\frac{\\partial v}{\\partial x} + \\frac{\\partial u}{\\partial y}) \u0026 \\frac{\\partial v}{\\partial y} \u0026 \\frac{1}{2}(\\frac{\\partial v}{\\partial z} + \\frac{\\partial w}{\\partial y}) \\ \\frac{1}{2}(\\frac{\\partial w}{\\partial x} + \\frac{\\partial u}{\\partial z}) \u0026 \\frac{1}{2}(\\frac{\\partial w}{\\partial y} + \\frac{\\partial v}{\\partial z}) \u0026 \\frac{\\partial w}{\\partial z} \\end{pmatrix} $\n对角线上的元素 ($\\frac{\\partial u}{\\partial x}, \\frac{\\partial v}{\\partial y}, \\frac{\\partial w}{\\partial z}$): 它们描述了微团在 x, y, z 三个方向上的拉伸或压缩率。例如，如果 $\\frac{\\partial u}{\\partial x} \u003e 0$，这意味着微团在 x 方向上被拉伸。 非对角线上的元素：它们描述了微团的剪切变形。例如，$\\frac{1}{2}(\\frac{\\partial u}{\\partial y} + \\frac{\\partial v}{\\partial x})$ 描述了微团在 x-y 平面上的剪切变形。 好了，知道了上面这些，下面我们就可以开始学习黏性力的公式 $\\mu \\nabla^2 \\mathbf{u}$ 是怎么来的了。这个公式实际上是对牛顿黏性定律（Newton’s Law of Viscosity）在三维流体中的简化和推广。\n1. 牛顿黏性定律 (Newton’s Law of Viscosity) 首先，从最简单的一维剪切流说起。想象两块平行板，中间是流体。下板静止，上板以速度 $U$ 移动。\n现象：流体层之间会产生摩擦。靠近上板的流体速度快，靠近下板的流体速度慢，形成一个速度梯度 $\\frac{du}{dy}$。 定律：牛顿黏性定律指出，流体层之间的剪切应力（shear stress） $\\tau$ 与垂直方向上的速度梯度 $\\frac{du}{dy}$ 成正比。 $\\tau = \\mu \\frac{du}{dy}$ 解释：μ 就是动力黏度（dynamic viscosity），它衡量了流体抵抗剪切变形的能力。这个定律描述了由于流速不均匀导致的内部摩擦力。 2. 推广到三维：应力张量和应变率张量 在三维空间中，情况变得复杂得多。流体不仅有剪切应力，还有拉伸应力；不仅有速度，还有速度场 u(x, y, z)。在三维流体中，应力不能再用一个简单的标量或向量来描述，而需要一个应力张量 (Stress Tensor) $\\mathbf{\\sigma}$。这个张量包含了流体内部所有方向上的各种应力 ； 流体微团的变形率也不能用简单的速度梯度 $\\frac{du}{dy}$ 来描述，而需要一个应变率张量 (Rate of Strain Tensor) $\\mathbf{e}$。这个张量包含了所有方向上的拉伸和剪切变形。 $\\mathbf{e} = \\frac{1}{2}(\\nabla \\mathbf{u} + (\\nabla \\mathbf{u})^T)$\n推广的牛顿黏性定律：在各向同性牛顿流体中，黏性应力张量 $\\mathbf{\\tau}$ 与应变率张量 $\\mathbf{e}$ 成线性关系： $\\mathbf{\\tau} = 2\\mu \\mathbf{e}$\n然后我们需要把黏性应力张量 $\\mathbf{\\tau}$ 转化为黏性力 $\\mathbf{F}_{\\text{viscous}}$。\n力是应力的散度。也就是说，黏性力等于黏性应力张量的散度。 $\\mathbf{F}_{\\text{viscous}} = \\nabla \\cdot \\mathbf{\\tau}$\n代入公式：\n$\\mathbf{F}_{\\text{viscous}} = \\nabla \\cdot (2\\mu \\mathbf{e})$ $\\mathbf{F}_{\\text{viscous}} = \\nabla \\cdot (\\mu (\\nabla \\mathbf{u} + (\\nabla \\mathbf{u})^T))$ 对于不可压缩流体，由于质量守恒，我们有散度为零：$\\nabla \\cdot \\mathbf{u} = 0$。这个条件可以极大地简化上述公式。\n经过一系列复杂的向量和张量运算（利用向量恒等式），并应用 $\\nabla \\cdot \\mathbf{u} = 0$ 这个条件，上面的方程可以化简为：\n$\\mathbf{F}_{\\text{viscous}} = \\mu \\nabla^2 \\mathbf{u}$\n由于过程太复杂所以后面再补充\n$\\mathbf{F}$ (External Forces)： 这是外部体力，例如重力、电磁力等。这些力作用于流体的每一个微小体积上，而不是作用在表面。 先研究EM波再迁移到等离子体波：在真空框架中引入介质效应 等离子体的行为由复杂的偏微分方程控制（如麦克斯韦方程、流体动力学方程等）。这些方程在小扰动下可以线性化，变成线性系统。所以我们只需要研究这些系统的波动解（如电磁波、离子声波、朗缪尔波等），就能理解整个系统的演化。 任何形状的波（无论多复杂）都可以分解成一组简单的正弦/余弦平面波的叠加。在波的世界里，平面波就是“基”。\nMaxwell Equations in Vacuum (Differential Form) Name Equation Meaning Gauss’s Law $$ \\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0} = 0 $$ Electric field lines originate on electric charges. Gauss’s Law for Magnetism $$ \\nabla \\cdot \\mathbf{B} = 0 $$ No magnetic monopoles; magnetic field lines are continuous loops. Faraday’s Law $$ \\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t} $$ A time-varying magnetic field induces a curling electric field. Ampère–Maxwell Law $$ \\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} $$ Electric currents and time-varying electric fields produce curling magnetic fields. Constants\nVacuum permittivity: $\\varepsilon_0 \\approx 8.854 \\times 10^{-12}\\ \\mathrm{F,m^{-1}}$ Vacuum permeability: $\\mu_0 = 4\\pi \\times 10^{-7}\\ \\mathrm{H,m^{-1}}$ In vacuum, $\\rho = 0$ and $\\mathbf{J} = 0$, reducing the equations to their homogeneous form. $$ \\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0} = 0 $$\n$$ \\nabla \\cdot \\mathbf{B} = 0 $$ Recall 高斯定律的物理含义：电场的散度等于电荷密度。在真空中，我们考虑的是没有自由电荷（$\\rho = 0$），也就是说在真空电磁波里，电场线没有“源”或“汇”，它们只能成闭合回路或无限延伸,所以电场散度为0；而对于磁场来说，由于自然界里没有观测到“磁单极子”。磁力线总是闭合的，没有孤立的“源”。所以磁场永远是无散度的，不管在真空还是在物质中。\n平面波假设与“代数化”替换 偏微分方程（PDE）往往很难直接解。但是 正弦函数（或复指数 $e^{i(kx-\\omega t)}$）是线性系统的本征解（eigenfunction）。对线性微分算子来说，正弦/指数波解代入后通常会直接化简成代数方程（就是所谓的色散关系 $\\omega(k)$）。所以第一步就变成 找出基本的单一平面波解。所以无论是声波、电磁波还是等离子体波，推导都会从假设波形，都会从假设一个平面波解 $e^{i(\\mathbf{k}\\cdot\\mathbf{r} - \\omega t)}$开始\n$$ u(t, \\mathbf{r}) = u_0 e^{i(\\mathbf{k}\\cdot \\mathbf{r} - \\omega t)} $$\n$$ \\mathbf{w}(t, \\mathbf{r}) = \\mathbf{w}_0 e^{i(\\mathbf{k}\\cdot \\mathbf{r} - \\omega t)} $$\n$u$ 是标量场（比如声波的压力场）。$\\mathbf{w}$ 是矢量场（比如电场 $\\mathbf{E}$ 或磁场 $\\mathbf{B}$）。 至于为什么要分成 $u$ 标量场 和 $w$ 矢量场是因为在等离子体理论中有些量本质上是标量（比如密度扰动、压力扰动，Langmuir 波等），有些是矢量（比如电场 $\\mathbf{E}$、磁场 $\\mathbf{B}$、速度 $\\mathbf{v}$）。在 PDE 系统中，标量和矢量的耦合方式不同。\n时间导数\n$$ \\frac{\\partial u}{\\partial t} = -i\\omega u $$\n对 $e^{i(\\mathbf{k}\\cdot \\mathbf{r} - \\omega t)}$ 关于 $t$ 求导，等于 $-i\\omega$ 乘上自己。 所以时间导数就等价于 $-i\\omega$\n空间导数（梯度）\n$$ \\nabla u = i\\mathbf{k} u $$\n对 $e^{i(\\mathbf{k}\\cdot \\mathbf{r})}$ 求空间导数\n散度、旋度\n$\\nabla \\cdot \\mathbf{w} = i \\mathbf{k}\\cdot \\mathbf{w}$ $\\nabla \\times \\mathbf{w} = i \\mathbf{k}\\times \\mathbf{w}$ so\n$$ \\frac{\\partial}{\\partial t} ;;\\longrightarrow;; -i\\omega $$\n$$ \\nabla ;;\\longrightarrow;; i\\mathbf{k} $$\n原本的麦克斯韦方程 $$ \\nabla \\times \\mathbf{E}(t,\\mathbf{r}) = -\\frac{\\partial \\mathbf{B}(t,\\mathbf{r})}{\\partial t} $$\n代入上面的字典：\n$$ i\\mathbf{k} \\times \\mathbf{E}(\\omega, \\mathbf{k}) = i\\omega \\mathbf{B}(\\omega, \\mathbf{k}) $$\n这就是在傅里叶空间（频率-波数空间）里的形式。\n取复振幅形式\n$$ \\mathbf{E}(\\mathbf{r},t)=\\mathbf{\\hat E},e^{i(\\mathbf{k}\\cdot\\mathbf{r}-\\omega t)},\\qquad \\mathbf{B}(\\mathbf{r},t)=\\mathbf{\\hat B},e^{i(\\mathbf{k}\\cdot\\mathbf{r}-\\omega t)}. $$\n则有算子替换\n$$ \\nabla \\to i\\mathbf{k},\\qquad \\frac{\\partial}{\\partial t}\\to -i\\omega. $$\n代入四条方程，得到代数方程：\n$$ \\begin{aligned} \u0026i\\mathbf{k}\\cdot\\mathbf{\\hat E}=0 \\ \\Rightarrow\\ \\mathbf{k}\\cdot\\mathbf{\\hat E}=0, \\ \u0026i\\mathbf{k}\\cdot\\mathbf{\\hat B}=0 \\ \\Rightarrow\\ \\mathbf{k}\\cdot\\mathbf{\\hat B}=0, \\ \u0026i\\mathbf{k}\\times\\mathbf{\\hat E}=-(-i\\omega)\\mathbf{\\hat B}=i\\omega\\mathbf{\\hat B} \\ \\Rightarrow\\ \\mathbf{k}\\times\\mathbf{\\hat E}=\\omega\\mathbf{\\hat B},\\ \u0026i\\mathbf{k}\\times\\mathbf{\\hat B}=\\mu_0\\varepsilon_0(-i\\omega)\\mathbf{\\hat E}=-,i\\frac{\\omega}{c^2}\\mathbf{\\hat E} \\ \\Rightarrow\\ \\mathbf{k}\\times\\mathbf{\\hat B}=-\\frac{\\omega}{c^2}\\mathbf{\\hat E}. \\end{aligned} $$\n（上式把两边的 $i$ 消去即可。）\n由于：\n$$ \\mathbf{k} \\cdot \\mathbf{E}_0 = 0 $$\n所以电场 $\\mathbf{E}$ 必须垂直于传播方向 $\\mathbf{k}$。 磁场 $\\mathbf{B}$ 也是同理。真空电磁波是 横波（transverse wave）。\n色散关系推导步骤 由 $\\mathbf{k}\\times \\mathbf{E}=\\omega \\mathbf{B}$ 得 $$ \\mathbf{B}=\\frac{1}{\\omega},\\mathbf{k}\\times \\mathbf{E}. $$\n代入另一条旋度式： $$ \\mathbf{k}\\times \\mathbf{B} =\\mathbf{k}\\times!\\left(\\frac{1}{\\omega},\\mathbf{k}\\times \\mathbf{E}\\right) =\\frac{1}{\\omega},\\big[\\mathbf{k}\\times(\\mathbf{k}\\times \\mathbf{E})\\big]. $$\n用向量恒等式 $$ \\mathbf{k}\\times(\\mathbf{k}\\times \\mathbf{E}) =\\mathbf{k}(\\mathbf{k}\\cdot \\mathbf{E})-\\mathbf{E}(\\mathbf{k}\\cdot \\mathbf{k}) =\\underbrace{\\mathbf{k}(\\mathbf{k}\\cdot \\mathbf{E})}_{=,0}-k^{2}\\mathbf{E} =-k^{2}\\mathbf{E}, $$\n其中用了 $\\mathbf{k}\\cdot\\mathbf{E}=0$。\n于是\n$$ \\mathbf{k}\\times \\mathbf{B}=\\frac{1}{\\omega},(-k^{2}\\mathbf{E})=-\\frac{k^{2}}{\\omega}\\mathbf{E}. $$\n但另一边由麦克斯韦方程有 $$ \\mathbf{k}\\times \\mathbf{B}=-\\frac{\\omega}{c^{2}}\\mathbf{E}. $$\n两式相等，消去负号与 $\\mathbf{E}$： $$ \\frac{k^{2}}{\\omega}=\\frac{\\omega}{c^{2}} \\ \\Longrightarrow\\ \\omega^{2}=k^{2}c^{2} $$\n这说明真空中的电磁波非色散：$\\omega = ck$，所有频率成分都以同一相速 $c$ 传播。\n同理，下面用 $\\mathbf{\\hat B}$ 推到色散关系\n$$ \\mathbf{\\hat E} = -,\\frac{c^2}{\\omega},\\mathbf{k}\\times\\mathbf{\\hat B}. $$\n代回第三式 $\\mathbf{k}\\times\\mathbf{\\hat E}=\\omega\\mathbf{\\hat B}$：\n$$ \\mathbf{k}\\times\\mathbf{\\hat E} =\\mathbf{k}\\times\\Big(-,\\frac{c^2}{\\omega},\\mathbf{k}\\times\\mathbf{\\hat B}\\Big) = -,\\frac{c^2}{\\omega},\\mathbf{k}\\times(\\mathbf{k}\\times\\mathbf{\\hat B}) =\\omega\\mathbf{\\hat B}. $$\n现在用向量恒等式（你文中提到的）：\n$$ \\mathbf{A}\\times(\\mathbf{B}\\times\\mathbf{C}) = \\mathbf{B}(\\mathbf{A}\\cdot\\mathbf{C})-\\mathbf{C}(\\mathbf{A}\\cdot\\mathbf{B}). $$\n令 $\\mathbf{A}=\\mathbf{k},\\ \\mathbf{B}=\\mathbf{k},\\ \\mathbf{C}=\\mathbf{\\hat B}$，得\n$$ \\mathbf{k}\\times(\\mathbf{k}\\times\\mathbf{\\hat B}) = \\mathbf{k}(\\mathbf{k}\\cdot\\mathbf{\\hat B}) - \\mathbf{\\hat B}(\\mathbf{k}\\cdot\\mathbf{k}) = -,k^2,\\mathbf{\\hat B}, $$\n因为上一步已由 $\\nabla\\cdot\\mathbf{B}=0\\Rightarrow \\mathbf{k}\\cdot\\mathbf{\\hat B}=0$。\n于是\n$$ -,\\frac{c^2}{\\omega},\\big[\\mathbf{k}\\times(\\mathbf{k}\\times\\mathbf{\\hat B})\\big] = -,\\frac{c^2}{\\omega},(-k^2\\mathbf{\\hat B}) = \\frac{c^2 k^2}{\\omega},\\mathbf{\\hat B} = \\omega\\mathbf{\\hat B}. $$\n移项（$\\mathbf{\\hat B}\\neq 0$ 为非平凡解）：\n$$ \\frac{c^2 k^2}{\\omega}=\\omega \\quad\\Longrightarrow\\quad \\omega^2=c^2 k^2. $$\n这就是色散关系。同时也再次看出极化条件 $\\mathbf{k}\\cdot\\mathbf{\\hat B}=0$，即 $\\mathbf{B}\\perp\\mathbf{k}$（横波）。\n现在学习一个新东西，波动方程。在maxwell的第三四个方程里，E和B是耦合在一起的。所以我们要take Maxwell equation for the curl of the E field and decouple it，就是把原来耦合在一起的场量（E、B、J、ρ）拆散，让方程只含一个未知量——通常是把 E 的旋度方程单独化成只含 E（或只含 B）的波动方程，而不再同时出现 E 和 B 两个场。\n起点：麦克斯韦第三方程（法拉第感应定律） $$ \\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t} $$\n两侧再取旋度 $\\mathbf{\\nabla\\times }$ $$ \\nabla \\times (\\nabla \\times \\mathbf{E}) = \\nabla \\times \\left(-\\frac{\\partial \\mathbf{B}}{\\partial t}\\right) $$ 把右侧时间导数提到最前 $$ \\nabla \\times (\\nabla \\times \\mathbf{E}) = -\\frac{\\partial}{\\partial t},(\\nabla \\times \\mathbf{B}) $$ 用麦克斯韦第四方程（安培–麦克斯韦定律）替换 $\\nabla \\times \\mathbf{B}$ $$ \\nabla \\times \\mathbf{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} $$ 代入得 $$ \\nabla \\times (\\nabla \\times \\mathbf{E}) = -\\frac{\\partial}{\\partial t}\\left(\\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}\\right) $$ 把常数 $\\mu_0\\varepsilon_0$ 提出，合并成二阶时间导数 $$ \\nabla \\times (\\nabla \\times \\mathbf{E}) = -\\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} $$ 现在化简完了右侧。左侧用矢量恒等式化简恒等式： $$ \\nabla \\times (\\nabla \\times \\mathbf{F}) = \\nabla(\\nabla \\cdot \\mathbf{F}) - \\nabla^2 \\mathbf{F} $$\n令 $\\mathbf{F} = \\mathbf{E}$： $$ \\nabla(\\nabla \\cdot \\mathbf{E}) - \\nabla^2 \\mathbf{E} = -\\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} $$ 由于真空无自由电荷 $\\nabla \\cdot \\mathbf{E} = 0$ $$ -\\nabla^2 \\mathbf{E} = -\\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} $$ 最终得到真空中的wave equation $$ \\nabla^2 \\mathbf{E} - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} = 0 $$ 或写成 $$ \\boxed{\\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} = \\frac{1}{\\mu_0 \\varepsilon_0}\\nabla^2 \\mathbf{E}} $$ 附：波速$c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}$\nThe derivation of the wave equation for B field is analogous, we’ll get the exactly the same equation, only hat instead of the letter E, we’ll get the B in the wave equation\n备注：所以上面那个色散关系的推导若用 波动方程 也能得到同样结果代平面波即给 $\\omega^2=c^2k^2$。 两种方法等价。\n$$ ,\\nabla^2\\mathbf{B} = \\mu_0\\varepsilon_0,\\frac{\\partial^2\\mathbf{B}}{\\partial t^2}. $$\n用 $c^2=\\dfrac{1}{\\mu_0\\varepsilon_0}$：\n$$ \\nabla^2\\mathbf{B} = \\frac{1}{c^2},\\frac{\\partial^2\\mathbf{B}}{\\partial t^2}. $$\n这就是B的 矢量波动方程：\n$$ \\boxed{\\ \\nabla^2\\mathbf{B} - \\frac{1}{c^2},\\frac{\\partial^2\\mathbf{B}}{\\partial t^2}=0\\ }. $$ 现在用平面波解法得到色散关系\n取平面波试探解（相位约定均与前文相同）：\n$$ \\mathbf{B}(\\mathbf{r},t)=\\hat{\\mathbf{B}},e^{i(\\mathbf{k}\\cdot\\mathbf{r}-\\omega t)}. $$\n算子替换：\n$$ \\nabla^2\\to -k^2,\\qquad \\partial_t^2\\to -\\omega^2. $$\n代入波动方程：\n$$ (-k^2)\\hat{\\mathbf{B}} - \\frac{1}{c^2}(-\\omega^2)\\hat{\\mathbf{B}} = 0 \\quad\\Longrightarrow\\quad (-k^2+\\frac{\\omega^2}{c^2})\\hat{\\mathbf{B}}=0. $$\n非平凡解要求括号为零：\n$$ \\boxed{\\ \\omega^2 = c^2 k^2\\ }. $$\n这就是与之前相同的色散关系。\n所以跟上面那种方法比较，用波动方程推导的步骤更短：推到 $\\nabla^2\\mathbf{B}-(1/c^2)\\partial_t^2\\mathbf{B}=0$，再代入平面波解即可得到 $\\omega^2=c^2k^2$。这一路径和“直接用两个旋度方程并消去 $\\mathbf{E}$”的做法是等价的，只是代数顺序不同。\n⭐其实找色散关系的这个过程也就是找非零解的过程。\n无源场的基本方程，比如在真空（没有电荷、没有电流）的 Maxwell 方程，可以推导出电场满足波动方程：\n$$ \\nabla^2 \\mathbf{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2} = 0 $$\n这是一个 齐次方程（右边 = 0，没有源项）。无源场 → 方程是齐次的。它总有一个 平凡解 ($\\mathbf{E}=0, \\mathbf{B}=0$); 它可能有 非零波动解，但前提是 $\\omega, k$ 必须满足色散关系，否则就不成立。\n❓ 如果没有外部电流/电荷在驱动那这些自由波什么的还怎么被激发\n无源 (source-free) 方程指的是 在当前方程里没有源项。但这并不排除初始条件或边界条件。无源只意味着方程里没有持续的外部驱动力，不代表没有波。波可以通过初始条件或边界条件被激发，然后就以自由波的形式传播。 另外，在等离子体中，电磁波的折射率𝜇(𝑘)取决于频率w。因此，不同频率的波在等离子体边界会被不同程度地偏折、反射或透射。\n？ 为什么一定要经过色散关系的加工 ？\n做傅里叶展开时，只是把初始时刻的复杂扰动写成很多正弦（或复指数）平面波的叠加。 相当于给每个频率/波数分量都贴了个标签 (k)，但还没说这些分量之后会怎么动。 时间演化的相位是 $\\phi(t) = kx - \\omega t$, 如果不知道 $\\omega$，就无法预测这个分量过了一段时间后相位转了多少、形状变成什么样。而色散关系就解决了这个”怎么动”的问题\n本节总结：所以为什么要先研究EM波作为研究等离子体波的基础\n当传播介质从真空换成等离子体，麦克斯韦方程右端多了等离子体的响应（电荷密度、流密度项）。再配合流体方程或 Vlasov 方程，构成“麦克斯韦 + 粒子动力学”的闭合系统。仍然假设解是平面波形式，把它代入这些方程，利用相同的代数技巧，这样会得到新的色散关系，例如冷等离子体横波： $$ \\omega^2 = \\omega_p^2 + c^2 k^2 $$ 它就是 EM 波在等离子体中的修正版，$\\omega_p$ 来自电子的集体振荡。 波的极化/偏振 1.概念\n电磁波或等离子体波，本质上都是振荡场矢量（电场 E、磁场 B 或速度扰动 v 等）在空间传播的过程。设波沿 $z$ 方向传播，电场在横向平面 $(x,y)$ 内可写为：\n$$ \\mathbf{E}\\perp (t) = \\begin{bmatrix} E{0x} \\cos(\\omega t) \\ E_{0y} \\cos(\\omega t + \\delta) \\end{bmatrix} $$\n其中$E_{0x}, E_{0y}$：两个方向上的振幅; $\\delta$是相位差\n随着时间变化，点 $(E_x(t),E_y(t))$ 在平面上描出的轨迹就是极化轨迹。\n\u003c 不同极化形式 \u003e\n线极化：$\\delta = 0$ 或 $\\pi$，轨迹为直线\n圆极化：$E_{0x} = E_{0y}$，且 $\\delta = \\pm \\pi/2$，轨迹为圆\n$\\delta = +\\pi/2$：左旋圆极化 (L) $\\delta = -\\pi/2$：右旋圆极化 (R) 椭圆极化：一般情况下（振幅不等，相位差不是正好 ±𝜋/2），轨迹就是一个椭圆。椭圆是最一般的情形，圆极化和线极化都是它的特例。\n\u003c 自由度 \u003e：独立的变量数目，可以用来描述系统状态。\n一个质点在二维平面运动 → 2 个自由度（$x,y$） 一个单色平面波传播 → 除了频率、波矢之外，还要知道它的场矢量方向。 $$ \\text{偏振自由度} = \\begin{cases} \\text{幅度/相位选择（线性 vs 圆偏振）}\\[4pt] \\text{旋转方向（左旋 vs 右旋）} \\end{cases} $$\n两个独立的基矢量：\n$\\mathbf{e}_R = \\frac{1}{\\sqrt{2}}(1,-i)$ （右旋） $\\mathbf{e}_L = \\frac{1}{\\sqrt{2}}(1,+i)$ （左旋） 任意横向电场都可以写成它们的线性组合：\n$$ \\mathbf{E}(t) = a_R \\mathbf{e}_R e^{-i\\omega t} + a_L \\mathbf{e}_L e^{-i\\omega t}. $$\n承上启下：不同偏振就是不同的本征模。\n在磁化等离子体中： R 模（右旋）和 L 模（左旋）的色散关系不同；它们和电子/离子的回旋运动耦合方式也不同（电子喜欢右旋，离子喜欢左旋）\n本征模 在等离子体波动推导中，我们通常得到一个关于扰动电场 $\\mathbf{E}$ 的线性代数方程：\n$$ \\mathbf{D}(\\omega,\\mathbf{k}) \\cdot \\mathbf{E} = 0 $$\n这里$\\mathbf{D}$ 是一个 色散矩阵，由介电张量 $\\epsilon_{ij}$ 和波矢 $\\mathbf{k}$ 组合而来；$\\mathbf{E}$ 是未知的扰动电场向量。\n这其实就是一个 齐次线性方程组。 $$ A\\mathbf{x} = 0 $$\n如果想要这个方程有non trival solution，那必须满足 $$ \\det|A| = 0. $$\n因此，色散矩阵行列式为零就是波存在的条件。这个条件给出了色散关系 $\\omega(\\mathbf{k})$。\n至于为什么是 $\\mathbf{D}\\cdot \\mathbf{E}$？将后续在这里补充\n说了那么多，总之，解那个齐次行列式就可以得到得到本征值。极化向量 $\\mathbf{E}$ 是本征矢量，色散关系 $\\omega(k)$ 是本征值。 对任意解 $(\\omega, \\mathbf{k})$，不仅得到色散关系 $\\omega(k)$，还得到本征矢量 $\\mathbf{E}$，它决定了极化。\n所以一般过程大概就是先看色散关系本身：给你频率 $\\omega(k)$，告诉你波速、频率范围等。然后就通过解出的本征矢量（场分量的比值与相位差）判断极化特征。比如说 $$ \\frac{E_y}{E_x} = \\pm i. $$\n在这个例子里面，对于 R 模，$E_y = -iE_x$，即相位差 $-90^\\circ$，对应 右旋圆极化，对于 L 模，$E_y = +iE_x$，即相位差 $+90^\\circ$，对应 左旋圆极化\n😓但这个一般过程的实际计算过程好像有点复杂，这里先不展开了\n很多等离子体波模式里的频率区间和极化对应关系如下：\n$\\omega \u003c \\Omega_i$ → Alfvén 波 什么极化不知道啊 看有的文章里说是线极化有的说是椭圆 圆极化 $\\omega \\approx \\Omega_i$ → Ion Cyclotron 波（左旋） $\\omega \\ll \\Omega_e$，但高于 $\\Omega_i$ → Whistler 波（右旋） $\\omega \\gg \\Omega_e$ → 光波极限，左右手对称 观测系里的极化变换（多普勒效应） 航天器处于太阳风流中，因此它观测到的波并不是 plasma frame 的频率，而是 Doppler-shifted frequency：\n$$ \\omega_{\\text{sc}} = \\omega_{\\text{plasma}} + \\mathbf{k}\\cdot \\mathbf{V}_{sw}, $$\n其中$\\omega_{\\rm plasma}$是波在等离子体共动参考系下的本征频率\n在高速太阳风条件下，对 ULF 波，等离子体本征频率很低： $\\omega_{\\rm plasma} \\sim 1\\ \\text{mHz} = 2\\pi\\times 10^{-3}\\ \\text{s}^{-1}$\n太阳风流速大： $V_{sw} \\sim 400\\ \\text{km/s}$， 波矢可能很小（长波长 mHz 波），但 $\\mathbf{k}\\cdot\\mathbf{V}{sw}$ = $k V{sw}\\cos\\theta$ 依然可以大于 $|\\omega_{\\rm plasma}|$ $$ |\\mathbf{k}\\cdot \\mathbf{V}{sw}| \\gg |\\omega{\\rm plasma}| $$\n假设波沿 逆太阳风方向传播（波矢与太阳风速度方向相反），则：\n$$ \\mathbf{k}\\cdot \\mathbf{V}_{sw} \u003c 0 $$\n此时飞船观测频率：\n$$ \\omega_{sc} = \\omega_{\\rm plasma} + \\underbrace{\\mathbf{k}\\cdot\\mathbf{V}{sw}}{\\text{大而负}} $$\n如果 $|\\mathbf{k}\\cdot\\mathbf{V}{sw}| \u003e |\\omega{\\rm plasma}|$：\n$$ \\omega_{sc} \\approx \\omega_{\\rm plasma} - |\\mathbf{k}\\cdot\\mathbf{V}_{sw}| \u003c 0 $$\n所以这种情况下即使波在等离子体参考系是正向振荡（$\\omega_{\\rm plasma}\u003e0$），在飞船参考系下看起来是负频率 → 表示观测到的波相位反转。\n就比如在船上向上游看（与波矢反向），高速河流的对流速度可能盖过波本身的振荡，使得波的相位似乎倒过来了。就是相对运动而已，这样就会导致观测到的极化方向反转：即本征左手波，在 spacecraft frame 里表现为右手（或者反之）。\nPlasma Waves（等离子体波） 定义： 等离子体波是存在于等离子体中的波动，它们不仅涉及电磁场，还涉及粒子的集体运动（如电子和离子）。等离子体波具有复杂结构，是电磁特性与机械特性的耦合结果。例如，声波在等离子体中也会激发电磁场，从而变成“部分电磁”的波动。\n常见类型包括：\n朗缪尔波（Langmuir waves）：高频电子密度波。\n离子声波（Ion acoustic waves）：低频声波，涉及离子和电子的协同运动。\nAlfvén 波：磁场引导的低频波，在磁化等离子体中传播。\n波型 色散关系 特点 Langmuir 波 $\\omega^2 = \\omega_{pe}^2 + 3 k^2 v_{te}^2$ 高频，近似无磁场依赖，电子主导 Alfvén 波 $\\omega = k_\\parallel v_A$ 无色散（理想MHD下），传播沿磁力线 离子回旋波 (ICW) $\\omega^2 = k^2 v_A^2 + \\Omega_{ci}^2$ 附近 在 $\\Omega_{ci}$ 附近强烈共振 磁声波 (快模) $\\omega^2 = k^2 (v_A^2 + c_s^2)$ 色散弱，压缩性强 磁声波 (慢模) $\\omega^2 = k_\\parallel^2 c_s^2 v_A^2 /(c_s^2+v_A^2)$ 沿磁场传播，低频 待详细补充这部分 MHD MHD把等离子体看作一种导电流体，类似汞在磁场中的行为。在这个模型中总是满足电中性：在任意体积元里，正负电荷总量相等。 $$\\rho_q = e(n_i - n_e) \\approx 0 $$ 这意味着电场不是主要由电荷积累产生的。 $$\\mathbf{J} = \\sum_s q_s n_s \\mathbf{v}_s$$ $$\\mathbf{J} = e n_i \\mathbf{v}_i - e n_e \\mathbf{v}_e$$ 但是只要 电子和离子的速度不一样（哪怕数密度一样），就会有电流。\n单个带电粒子在磁场中的洛伦兹力： $$\\mathbf{F} = q,\\mathbf{v} \\times \\mathbf{B}$$ 等离子体里有很多电子和离子，所以单位体积内的总力： $$\\mathbf{F}_{\\text{total}} = n_i e,\\mathbf{v}_i \\times \\mathbf{B} + n_e (-e),\\mathbf{v}e \\times \\mathbf{B}$$ $$\\mathbf{F}{\\text{total}} = \\mathbf{j} \\times \\mathbf{B}$$ 这就是 MHD 中著名的磁张力 / 磁压力力，也是磁场和流体之间动量交换的主要方式。 $$\\rho_m(\\mathbf{r},t) \\frac{d\\mathbf{v}(\\mathbf{r},t)}{dt} = -\\nabla p(\\mathbf{r},t) + \\mathbf{j}(\\mathbf{r},t) \\times \\mathbf{B}(\\mathbf{r},t)$$\n待补充 Dayside 太阳风在空间中的传播形式 Parker Spiral（帕克螺旋） IMF与太阳风速度夹角（“圆锥角”）约45–60°\nRadial IMF（径向 IMF） ：IMF几乎与太阳风速度对齐（小圆锥角，常取 \u003c10–30°）。\n准平行激波：宽大的 foreshock，离子反射显著，波动强烈\n准垂直激波磁场几乎贴着激波面。离子大多被压缩进去，反射少。foreshock 很窄甚至没有，离子主要压缩进入下游\n在火星这种无全球偶极磁场的行星上，太阳风先在弓激波（bow shock）处被减速、加热和压缩——这种通过激波后的太阳风物质称为shocked solar wind plasma（激波后的太阳风等离子体）。\n在弓激波之后、到达电离层顶端之前，会形成磁屏障/磁堆积层。它的作用之一就是把这些高温、高速的太阳风等离子体，与下方冷而稠密的火星电离层离子（主要是 O⁺、O₂⁺ 等，低温低速）区分开来。\nRankine–Hugoniot Conditions （激波是什么？ 一个速度和磁场的不连续层） 背景：R–H 条件描述的是 守恒方程在激波面上的间断条件。 物理意义：激波是一个非常薄的过渡层（厚度约为离子尺度），在宏观上可视为一个不连续面。R–H 条件给出了跨越该不连续面前后物理量的跳跃关系。 推导思路：\n我们考虑一个控制体积，体积由激波面（法向量 n）分隔，应用守恒定律：\n质量守恒 $$[\\rho (\\mathbf{u} \\cdot \\mathbf{n})] = 0$$ 即：$$\\rho_1 u_{1n} = \\rho_2 u_{2n}$$\n动量守恒 $$\\left[ \\rho \\mathbf{u} u_n + p\\mathbf{n} \\right] = 0$$\n分解到法向和切向方向：\n法向： $$ \\rho_1 u_{1n}^2 + p_1 = \\rho_2 u_{2n}^2 + p_2 $$\n切向： $$ \\rho_1 u_{1n} u_{1t} = \\rho_2 u_{2n} u_{2t} $$\n能量守恒 $$ \\left[ \\left( \\frac{1}{2}\\rho u^2 + \\frac{\\gamma}{\\gamma-1}p \\right) u_n \\right] = 0 $$\n（流体 Rankine–Hugoniot 关系） $$ \\frac{1}{2}u_1^2 + \\frac{\\gamma}{\\gamma-1}\\frac{p_1}{\\rho_1} \\frac{1}{2}u_2^2 + \\frac{\\gamma}{\\gamma-1}\\frac{p_2}{\\rho_2} $$\nMHD 扩展（磁流体 Rankine–Hugoniot 条件）\n在等离子体中，除了质量、动量、能量守恒外，还要考虑 磁场的边界条件（来自 Maxwell 方程）：\n质量守恒 $$ [\\rho u_n] = 0 $$ 2. 法向磁场连续 $$[B_n] = 0$$ 3. 法向动量守恒 $$ \\left[\\rho u_n^2 + p + \\frac{B_t^2}{2\\mu_0}\\right] = 0 $$ 4. 切向动量守恒 $$ [\\rho u_n u_t - \\frac{B_n B_t}{\\mu_0}] = 0 $$ 5. 切向电场连续 $$ [u_n B_t - u_t B_n] = 0 $$ 6. 能量守恒（含磁场能量） $$ \\left[ \\left(\\frac{1}{2}\\rho u^2 + \\frac{\\gamma}{\\gamma-1}p + \\frac{B^2}{2\\mu_0}\\right)u_n - \\frac{B_n}{\\mu_0}(\\mathbf{u}\\cdot \\mathbf{B}) \\right] = 0 $$\n弓激波（Bow Shock）：\n火星、地球前方的太阳风弓激波满足 R–H 条件。\n压缩比：\n$$ \\frac{\\rho_2}{\\rho_1} \\leq \\frac{\\gamma+1}{\\gamma-1} $$\n对于理想单原子气体（γ=5/3），上限为 4。\n磁鞘（Magnetosheath）：\n通过 R–H 条件可以估算磁鞘中密度、温度、速度、磁场的变化。 例如：上游密度 $n_1 \\sim 5,\\text{cm}^{-3}$，下游可能增加到 $n_2 \\sim 15–20,\\text{cm}^{-3}$。 太阳风接触激波的时候会发生什么 反弹的机制 首先，太阳风中存在一个对流电场。对流电场的来源主要由带电流体的运动在磁场中产生（或在惯性系中伴随磁场流动而出现的有效电场）。（理想 MHD）：\n$$ \\mathbf{E} = -\\mathbf{V}_{sw}\\times\\mathbf{B}. $$\n若 IMF 接近径向（即 $\\mathbf{B}$ 与太阳风速度 $\\mathbf{V}{sw}$ 平行或反平行），则 $\\mathbf{V}{sw}\\times\\mathbf{B}\\approx 0$ ⇒ $\\mathbf{E}$ 非常小。 所以在径向 IMF 条件下对流电场本身很弱。\n激波是一个动边界条件，它会反射一部分粒子。反射方式和弓激波前方太阳风离子流的速度，IMF方向，激波面法向的夹角关系紧密。\n有些离子因为下列机制被反弹：\n镜像效应 (magnetic mirror)： 磁矩守恒（first adiabatic invariant）\n$$ \\mu = \\frac{m v_\\perp^2}{2 B} \\quad $$\n当粒子从激波上游进入激波 transition region，磁场强度 $B$ 快速增强。由于 $\\mu$ 要保持不变：\n$$ \\frac{v_\\perp^2}{B} \\approx \\text{常数} $$\n所以如果 $B$ 增大，则 $v_\\perp$ 必须增加。\n但是粒子总能量\n$$ E = \\frac{1}{2}m (v_\\perp^2 + v_\\parallel^2) $$\n是守恒的。 → 所以 $v_\\parallel^2$ 必须减小来补偿 $v_\\perp$ 的增大。 当 $v_\\parallel \\to 0$ 并继续“被迫变成负值”时，离子就会被 磁镜反射，回流上游。 $$ \\sin^2 \\alpha_0 \u003e \\frac{B_0}{B_{\\max}} $$\n其中 $\\alpha_0$ 是入射 pitch angle，$B_0$ 是上游磁场，$B_{\\max}$ 是激波处磁场。 满足条件的粒子会反射，形成 beam/环束分布。\n电势反射（Cross-shock potential） 激波前沿存在一个电势差 $\\Delta \\Phi$，通常 $100 ,\\text{eV} - 1 ,\\text{keV}$。 来源于激波前沿电荷分离，导致 cross-shock electric field。\n沿激波法向 $x$方向考虑： $$\\frac{dE_x}{dx} = \\frac{\\rho_{\\rm charge}(x)}{\\varepsilon_0} = \\frac{e(n_i - n_e)}{\\varepsilon_0}$$ 当 $n_i \\neq n_e$（哪怕是 1% 的差别），就会在该位置产生法向电场 $E_x$。 这个跨激波电场（cross-shock electric field）会在 shock normal 方向上可能是起一个减速/加速离子，让它们更快匹配电子的速度变化的作用吧？？？。\n沿激波法向 $n$ 的能量守恒：\n$$ \\frac{1}{2} m v_n^2 - q \\Delta \\Phi = \\text{常数} $$\n如果入射离子的动能在法向分量不足以克服电势垒：\n$$ \\frac{1}{2} m v_n^2 \u003c q \\Delta \\Phi $$\n则它会被减速到零，再被反弹回去。\n反射离子会怎样运动 洛伦兹力在垂直方向展开：\n$$ m \\dot{v}_x = q E + q v_y B \\quad\\Rightarrow\\quad \\dot{v}_x = \\frac{q}{m} E + \\Omega v_y $$\n$$ m \\dot{v}_y = -q v_x B \\quad\\Rightarrow\\quad \\dot{v}_y = - \\Omega v_x $$\n其中 $\\Omega = \\frac{qB}{m}$ 是回旋频率。\n引入复速度 $u = v_x + i v_y$是用来把两条耦合的一阶方程合成一条单一方程，更容易求解。\n原来的耦合方程：\n$$ \\begin{cases} \\dot v_x = \\frac{q}{m} E + \\Omega v_y\\ \\dot v_y = - \\Omega v_x \\end{cases} $$\n可以写成复数形式：\n$$ u = v_x + i v_y $$\n于是耦合方程就能变成一个一阶线性常微分方程，这里的 $i$ 只是数学符号，用来把 $x$ 和 $y$ 的耦合旋转统一表示，不代表任何物理复数粒子。这样解出来之后，用实部和虚部分别表示 $v_x$ 和 $v_y$：\n$$ v_x = \\mathrm{Re}(u),\\quad v_y = \\mathrm{Im}(u) $$ 现在试着解一下：\n$$ \\dot u=\\dot v_x+i\\dot v_y =\\Omega\\frac{E}{B}+\\Omega v_y+i(-\\Omega v_x) =\\Omega\\frac{E}{B}-i\\Omega(v_x+ i v_y) =\\Omega\\frac{E}{B}-i\\Omega u. $$\n整理得一阶线性常微分方程\n$$ \\dot u + i\\Omega u = \\Omega\\frac{E}{B}. $$\n这是标准形式，解法用积分因子 $e^{i\\Omega t}$：\n$$ \\frac{d}{dt}\\big(u e^{i\\Omega t}\\big)=\\Omega\\frac{E}{B} e^{i\\Omega t}. $$\n积分得\n$$ u e^{i\\Omega t}=\\Omega\\frac{E}{B}\\int_0^t e^{i\\Omega s}ds + C =\\Omega\\frac{E}{B}\\cdot\\frac{e^{i\\Omega t}-1}{i\\Omega}+C =-i\\frac{E}{B}(e^{i\\Omega t}-1)+C. $$\n两边乘回 $e^{-i\\Omega t}$：\n$$ u(t)=-i\\frac{E}{B}+C e^{-i\\Omega t}. $$\n用初始条件 $v_x(0)=0,\\ v_y(0)=0\\Rightarrow u(0)=0$：\n$$ 0=-i\\frac{E}{B}+C \\quad\\Rightarrow\\quad C=i\\frac{E}{B}. $$\n于是\n$$ u(t)=-i\\frac{E}{B}+i\\frac{E}{B}e^{-i\\Omega t} =i\\frac{E}{B}\\big(e^{-i\\Omega t}-1\\big). $$\n把 $e^{-i\\Omega t}=\\cos(\\Omega t)-i\\sin(\\Omega t)$ 展开：\n$$ e^{-i\\Omega t}-1=(\\cos\\Omega t-1)-i\\sin\\Omega t. $$\n乘以 $i$：\n$$ i\\big(e^{-i\\Omega t}-1\\big)=i(\\cos\\Omega t-1)+\\sin\\Omega t =\\sin\\Omega t + i(\\cos\\Omega t-1). $$\n因此\n$$ u(t)=\\frac{E}{B}\\Big(\\sin\\Omega t + i(\\cos\\Omega t-1)\\Big). $$\n$$ v_x(t)=\\Re(u)=\\frac{E}{B}\\sin(\\Omega t),\\qquad v_y(t)=\\Im(u)=\\frac{E}{B}\\big(\\cos(\\Omega t)-1\\big). $$ 可以尝试在速度空间里画一下这个运动轨迹，大概就是一个回旋叠加上平均漂移的环形运动\n会激发共振 ⭐反射离子会往上游运动（逆着太阳风），与主流太阳风中的背景离子发生相对运动。 这种 相对流 很容易激发不稳定性（instability）。最常见的就是 Alfvénic/ion-cyclotron 型不稳定性，于是会在上游自然产生 低频 MHD 波动。一般上游区域主要出现的反射离子不稳定性（ion/beam instability）会 preferentially 激发 Alfvén/ion-cyclotron 模式。\n所以被反射的粒子不会逃回太阳哈哈哈… 在上游，背景还是一个高速的太阳风流（几百 km/s），反射离子只是相对主流多了一个逆流分量。所以它们会在有限的区域和背景流发生相互作用：\n如果一个离子沿 IMF 的速度分量 小于 Alfvén 速度，那么它会被上游传播的波动追上，与背景离子发生 环波/环束不稳定性，激发 ULF 或离子回旋波。也就是在传播一段距离后，就会被背景太阳风重新\u003c卷回\u003e激波。？？ 如果它的速度 大于 Alfvén 速度，那么它能比 Alfvén 波更快地“跑回去”，真正进入上游，形成可持续的 beam $$ v_\\text{ph} = \\frac{\\omega}{k} $$ 离子和波之间存在 共振条件： $$ \\omega - k_\\parallel v_\\parallel \\approx n \\Omega_i $$\n（$n$ 是谐波数，常见是 $n=1$，$\\Omega_i$ 是离子回旋频率）\n如果 $v_\\parallel \u003c v_\\text{ph}$，离子就会被波场驯服，跑不远。 如果 $v_\\parallel \u003e v_\\text{ph}$，它们才能甩开波，真正进入上游区域，形成回流束，即backstreaming ions . . . . . . . 好了，现在我们假设它可以成功进入上游区域。\n太阳风离子（主要是质子）在进入火星弓激波之前，基本上是一个准单流（quasi-mono-streaming）的分布。在速度空间里表现为： $$ f(\\mathbf{v}) \\approx n_0 , \\delta(\\mathbf{v} - \\mathbf{V}_{sw}) $$ 在速度空间里，反射离子叠加到原本冷流背景上，就形成了一个 beam / ring-beam 结构。\n如果反射过程中有 pitch angle 散射，分布就会变成 环形ring。 如果主要沿磁场方向，那么就是 field-aligned beam。 $$ f(\\mathbf{v}) = f_{sw}(\\mathbf{v}) + f_{beam}(\\mathbf{v}) $$ 其中 $$ f_{beam}(\\mathbf{v}) \\propto \\delta(v_\\parallel - v_b),\\delta(v_\\perp) $$ 或更一般的环状分布 $$ f_{ring}(\\mathbf{v}) \\propto \\delta(v_\\parallel - v_b),\\delta(v_\\perp - v_r) $$ 由于背景流本来几乎各向同性+窄分布，所以这类沿 IMF 方向的 beam在分布函数上显得很突出 关于为什么共振会激发波我还不太理解，目前简单理解为： 粒子往下跑只能吸收波能量 → 阻尼（Landau damping），现在 beam 让分布函数在某方向形成“上坡” → 粒子往上跑时激发共振会把离子的能量泵进波里。\nLandau 共振 ($n=0$)：$\\omega = k_\\parallel v_\\parallel$，即波相速度 = 粒子速度。 Cyclotron 共振 ($n=\\pm1$)：粒子绕磁场旋转运动和波的横向电场相位同步。 波的增长率（quasi-linear 近似下）可以写作：\n$$ \\gamma \\propto \\sum_n \\int d^3v , \\delta(\\omega - k_\\parallel v_\\parallel - n \\Omega_i) , \\Bigg[ \\frac{\\partial f}{\\partial v_\\perp} + \\frac{k_\\parallel v_\\perp}{\\omega} \\frac{\\partial f}{\\partial v_\\parallel} \\Bigg] $$\n在Maxwell 分布下，$\\partial f/\\partial v \u003c 0$，波被阻尼。 但在beam/ring 分布下，某个速度区间的斜率是 正的 → 这就导致 $\\gamma \u003e 0$，波被放大。\nδ 函数强制“共振位点”：只有满足 $\\omega - k_\\parallel v_\\parallel - n\\Omega = 0$ 的粒子会与波共振（$n$ 为回旋谐波，常以 $n=\\pm1$ 的 ion-cyclotron 共振最重要）。 如果在共振速度处速度分布的某些导数为正（例如 $ \\partial f/\\partial v_\\perp \u003e0$，即在某个 $v_\\perp$ 上粒子密度比周围更高），那对应项会给出 $\\gamma\u003e0$ ⇒ 波增长（不稳定）。 对于 ring 分布，$f(v_\\perp)$ 在 $v_\\perp \\approx v_{\\rm ring}$ 处有强峰或正斜率，因此产生离子-回旋类的增益（生成 ULF / ion-cyclotron 波或 Alfvénic 波，视 $k$ 与 plasma 参数而定）。 详细的后续了解后再补充吧。\nNightSide 感应磁尾处在发生什么 在行星火星的 感应磁尾 中，太阳风与感应电流在行星夜侧形成一条长长的电流片（plasma sheet）。这个电流片里，磁场方向反向（上南下北），就像一个 反平行磁场配置，磁重联很容易发生。\n在理想 MHD 里，电场满足\n$$ \\mathbf{E} + \\mathbf{v} \\times \\mathbf{B} = 0, $$\n再加上 Faraday 定律\n$$ \\frac{\\partial \\mathbf{B}}{\\partial t} = -\\nabla \\times \\mathbf{E}, $$\n可以推出\n$$ \\frac{\\partial \\mathbf{B}}{\\partial t} = \\nabla \\times (\\mathbf{v} \\times \\mathbf{B}), $$\nAlfven’s theorem, also known as the frozen-in flux theorem, states that in a perfectly conducting fluid, magnetic field lines move with the fluid without dissipation.\n所以当有扩散项时，就不再遵循Alfven’s theorem, 就会有一个非理想项出现在广义欧姆定律里：\n$$ \\mathbf{E} + \\mathbf{v} \\times \\mathbf{B} = \\eta \\mathbf{J} - \\frac{\\mathbf{J}\\times \\mathbf{B}}{ne} - \\frac{\\nabla p_e}{ne} + \\ldots $$\n常见的非理想项：\n电阻项 $\\eta \\mathbf{J}$：由有限电导率造成（Sweet–Parker 重联）。 Hall 项 $-\\frac{\\mathbf{J}\\times \\mathbf{B}}{ne}$：在离子和电子动力学不同的情况下出现。 电子压力梯度项 $-\\nabla p_e / (ne)$。 动理学效应（有限拉莫尔半径、波粒相互作用等）。 这就导致磁力线不再严格跟随等离子体的运动，而是允许磁通量拓扑发生变化。 磁通绳（flux rope）里重联触发的脉动可以类比成一个非线性耦合振子系统。\n………………….反正中间通过什么过程把尾部磁能转化为等离子体加速和波动了，当 flux rope 在磁尾中生成时，它通常伴随 突然的能量释放（来自重联过程）。这会在等离子体和磁场中激发一系列波动\n",
+  "wordCount" : "2771",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://K390svg.github.io/posts/waves_in_plasma/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mercury's Blogs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://K390svg.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://K390svg.github.io/" accesskey="h" title="Mercury&#39;s Blogs (Alt + H)">Mercury&#39;s Blogs</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">14 min
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="waves-in-plasma">Waves in plasma<a hidden class="anchor" aria-hidden="true" href="#waves-in-plasma">#</a></h1>
+<blockquote>
+<p>Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity</p>
+<p>Whenever a plasma is disturbed, there will be waves!</p></blockquote>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p><a href="#navier-stokes-equations">Navier-Stokes equations</a></p>
+</li>
+<li>
+<p><a href="#%E5%85%88%E7%A0%94%E7%A9%B6em%E6%B3%A2%E5%86%8D%E8%BF%81%E7%A7%BB%E5%88%B0%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2%E5%9C%A8%E7%9C%9F%E7%A9%BA%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%BC%95%E5%85%A5%E4%BB%8B%E8%B4%A8%E6%95%88%E5%BA%94">EM波 in vaccum</a></p>
+<ul>
+<li><a href="#%E5%B9%B3%E9%9D%A2%E6%B3%A2%E5%81%87%E8%AE%BE%E4%B8%8E%E4%BB%A3%E6%95%B0%E5%8C%96%E6%9B%BF%E6%8D%A2">波的色散</a></li>
+<li><a href="#%E6%B3%A2%E7%9A%84%E6%9E%81%E5%8C%96%E5%81%8F%E6%8C%AF">波的偏振</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#plasma-waves%E7%AD%89%E7%A6%BB%E5%AD%90%E4%BD%93%E6%B3%A2">等离子体波</a></p>
+</li>
+<li>
+<p><a href="#dayside">Dayside</a></p>
+</li>
+<li>
+<p><a href="#nightside">Nightside</a></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="navier-stokes-equations">Navier-Stokes equations<a hidden class="anchor" aria-hidden="true" href="#navier-stokes-equations">#</a></h2>
+<h4 id="1-流体基本假设">1. 流体基本假设<a hidden class="anchor" aria-hidden="true" href="#1-流体基本假设">#</a></h4>
+<p>简化假设：</p>
+<ul>
+<li><strong>Newtonian</strong>：流体的剪切应力与应变率（速度梯度）成线性关系。这意味着流体的黏度（<code>μ</code>）是恒定的，不随剪切力而改变。</li>
+<li><strong>Incompressible Fluid</strong>：流体的密度（<code>ρ</code>）是恒定的，不随压力或位置变化。这简化了质量守恒方程。</li>
+<li><strong>Isothermal Fluid</strong>：流体的温度是恒定的，所以可以忽略与热力学相关的能量方程。</li>
+</ul>
+<h4 id="2-质量守恒连续性方程-continuity-equation">2. 质量守恒：连续性方程 (Continuity Equation)<a hidden class="anchor" aria-hidden="true" href="#2-质量守恒连续性方程-continuity-equation">#</a></h4>
+<p>第一条方程是<strong>质量守恒</strong>的体现。在不可压缩流体中，质量守恒可以简化为体积守恒。
+<code>∇ · u = 0</code>
+散度为零意味着该点没有流体产生或消失，因此流体是不可压缩的。</p>
+<h4 id="3-动量守恒纳维-斯托克斯方程-navier-stokes-equation">3. 动量守恒：纳维-斯托克斯方程 (Navier-Stokes Equation)<a hidden class="anchor" aria-hidden="true" href="#3-动量守恒纳维-斯托克斯方程-navier-stokes-equation">#</a></h4>
+<p>第二条方程是<strong>动量守恒</strong>在流体中的应用，可以看作是牛顿第二定律 <code>F = ma</code> 在流体individual molecule上的推广。
+由于我们考虑的是一个微小的流体体积，我们用<strong>密度 <code>ρ</code></strong> 来代替质量 <code>m</code></p>
+<p>$$\rho \frac{du}{dt} = \sum F$$
+$$\rho \frac{du}{dt} = -\nabla p + \mu \nabla^2 u + \mathbf{F}$$</p>
+<ul>
+<li><strong>$\rho \frac{du}{dt}$<strong>是</strong>动量变化率</strong></li>
+<li><strong>$-\nabla p$</strong> 是<strong>压力梯度力</strong>。流体会从高压区域流向低压区域。这里的 <code>∇p</code> 是压力场的梯度，这里的负号是是由于压力梯度 ∇p 指向的是压力增长最快的方向，想象一下如果你左边的压力比右边大，你会被从左边推向右边。</li>
+<li><strong>$\mu \nabla^2 u$</strong> (Viscous Term)：
+<ul>
+<li>这是<strong>黏性力</strong>。它描述了流体内部由于黏度产生的摩擦力。当流体的不同层以不同速度流动时，就会产生黏性剪切力。<code>∇^2 u</code> 是速度场的拉普拉斯算子，描述了速度场的曲率，与黏性力直接相关。</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>先从二维的速度场 <code>u(x, y)</code>看起，只看一个点 <code>(x, y)</code> 附近的微小流体微团。这个微团的速度梯度矩阵是 <code>∇u</code>。这里 $u,v$ 分别是 $x,y$ 方向的速度。
+$$
+\nabla u =
+\begin{bmatrix}
+\frac{\partial u}{\partial x} &amp; \frac{\partial u}{\partial y} \
+\frac{\partial v}{\partial x} &amp; \frac{\partial v}{\partial y}
+\end{bmatrix}
+$$</p>
+<ul>
+<li>对角线项：$\partial u/\partial x, \partial v/\partial y$，表示沿各自方向的拉伸或压缩（体积/面积改变）。</li>
+<li>非对角线项：耦合项，可能表示剪切或者旋转。</li>
+</ul>
+<p>由于<code>∇u</code> 矩阵混合了<strong>旋转</strong>和<strong>变形</strong>的信息。我们必须把它们分开，因为黏性力只与变形有关，而与刚体旋转无关。</p>
+<p>任何一个方阵 <code>A</code>，都可以唯一地分解为一个<strong>对称矩阵</strong> <code>S</code> 和一个<strong>反对称矩阵</strong> <code>Q</code>：</p>
+<p>$$A = S + Q $$ $$S = \frac{1}{2}(A + A^T) $$
+$$Q = \frac{1}{2}(A - A^T)$$</p>
+<ul>
+<li><strong>对称矩阵</strong>：$S^T = S$。对称矩阵描述的是<strong>拉伸和压缩</strong>。
+<ul>
+<li>例如，一个沿对角线拉伸的矩阵 $\begin{pmatrix} 2 &amp; 0 \ 0 &amp; 3 \end{pmatrix}$。</li>
+</ul>
+</li>
+<li><strong>反对称矩阵</strong>：$Q^T = -Q$。反对称矩阵描述的是<strong>旋转</strong>。
+<ul>
+<li>例如，一个旋转矩阵 $\begin{pmatrix} 0 &amp; -1 \ 1 &amp; 0 \end{pmatrix}$。</li>
+</ul>
+</li>
+</ul>
+<h3 id="纯旋转">纯旋转<a hidden class="anchor" aria-hidden="true" href="#纯旋转">#</a></h3>
+<p>以角速度 $\omega$ 绕原点旋转：</p>
+<p>$$
+u = -\omega y, \quad v = \omega x
+$$</p>
+<p>得到梯度：</p>
+<p>$$
+\nabla u =
+\begin{bmatrix}
+0 &amp; -\omega \
+\omega &amp; 0
+\end{bmatrix}
+$$</p>
+<p>特点：</p>
+<ul>
+<li><strong>对角线 = 0</strong> → 没有任何方向上的拉伸或压缩，物体不被拉长/压缩。</li>
+<li><strong>上下互为相反数</strong> → 表示“x 方向的速度随 y 变化”和“y 方向的速度随 x 变化”是成对出现的，刚好形成绕原点的旋转。</li>
+</ul>
+<ol>
+<li><strong>对称部分</strong>：</li>
+</ol>
+<h1 id="right">$$
+D = \tfrac{1}{2}\Big(\nabla u + (\nabla u)^T\Big)
+$$
+描述形状改变（拉伸、剪切）。
+$$
+D = \tfrac{1}{2}
+\left(
+\begin{bmatrix}
+0 &amp; -\omega \
+\omega &amp; 0
+\end{bmatrix}
++
+\begin{bmatrix}
+0 &amp; \omega \
+-\omega &amp; 0
+\end{bmatrix}
+\right)</h1>
+<p>\begin{bmatrix}
+0 &amp; 0 \
+0 &amp; 0
+\end{bmatrix}
+$$
+<strong>零矩阵 → 没有拉伸或剪切，微团形状不变</strong>。</p>
+<ol start="2">
+<li><strong>反对称部分</strong>：</li>
+</ol>
+<p>$$
+W = \tfrac{1}{2}\Big(\nabla u - (\nabla u)^T\Big)
+$$</p>
+<h2 id="endbmatrix">描述旋转。
+$$
+W = \tfrac{1}{2}
+\left(
+\begin{bmatrix}
+0 &amp; -\omega \
+\omega &amp; 0
+\end{bmatrix}</h2>
+<h1 id="right-1">\begin{bmatrix}
+0 &amp; \omega \
+-\omega &amp; 0
+\end{bmatrix}
+\right)</h1>
+<p>\begin{bmatrix}
+0 &amp; -\omega \
+\omega &amp; 0
+\end{bmatrix}
+$$
+<strong>纯反对称矩阵 → 只包含旋转，表示角速度 $\omega$</strong>。</p>
+<p>现在，我们可以引入下面两个量了</p>
+<ul>
+<li>
+<p><strong><code>∇u</code> 的对称部分</strong>：<strong>应变率张量</strong> $\mathbf{e} = \frac{1}{2}(\nabla \mathbf{u} + (\nabla \mathbf{u})^T)$</p>
+<ul>
+<li>它的对角线元素代表<strong>拉伸和压缩</strong>。</li>
+<li>它的非对角线元素代表<strong>剪切变形</strong>。</li>
+<li>这一部分描述了流体微团如何<strong>改变形状</strong>，这正是黏性力产生的根源。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>∇u</code> 的反对称部分</strong>：<strong>涡度张量</strong> $\mathbf{w} = \frac{1}{2}(\nabla \mathbf{u} - (\nabla \mathbf{u})^T)$</p>
+<ul>
+<li>这一部分描述了流体微团的<strong>刚体旋转</strong>，与流体涡度（vorticity）直接相关。因为刚体旋转本身不会引起内部摩擦，所以黏性力与这一部分<strong>无关</strong>。</li>
+</ul>
+</li>
+</ul>
+<p>再举一个三维的例子：</p>
+<p>$ \mathbf{e} = \begin{pmatrix} \frac{\partial u}{\partial x} &amp; \frac{1}{2}(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x}) &amp; \frac{1}{2}(\frac{\partial u}{\partial z} + \frac{\partial w}{\partial x}) \ \frac{1}{2}(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}) &amp; \frac{\partial v}{\partial y} &amp; \frac{1}{2}(\frac{\partial v}{\partial z} + \frac{\partial w}{\partial y}) \ \frac{1}{2}(\frac{\partial w}{\partial x} + \frac{\partial u}{\partial z}) &amp; \frac{1}{2}(\frac{\partial w}{\partial y} + \frac{\partial v}{\partial z}) &amp; \frac{\partial w}{\partial z} \end{pmatrix} $</p>
+<ul>
+<li><strong>对角线上的元素</strong> ($\frac{\partial u}{\partial x}, \frac{\partial v}{\partial y}, \frac{\partial w}{\partial z}$): 它们描述了微团在 <code>x, y, z</code> 三个方向上的<strong>拉伸或压缩率</strong>。例如，如果 $\frac{\partial u}{\partial x} &gt; 0$，这意味着微团在 <code>x</code> 方向上被拉伸。</li>
+<li><strong>非对角线上的元素</strong>：它们描述了微团的<strong>剪切变形</strong>。例如，$\frac{1}{2}(\frac{\partial u}{\partial y} + \frac{\partial v}{\partial x})$ 描述了微团在 <code>x-y</code> 平面上的剪切变形。</li>
+</ul>
+<p>好了，知道了上面这些，下面我们就可以开始学习<strong>黏性力的公式</strong> $\mu \nabla^2 \mathbf{u}$ 是怎么来的了。这个公式实际上是<strong>对牛顿黏性定律（Newton&rsquo;s Law of Viscosity）在三维流体中的简化和推广</strong>。</p>
+<h4 id="1-牛顿黏性定律-newtons-law-of-viscosity">1. 牛顿黏性定律 (Newton&rsquo;s Law of Viscosity)<a hidden class="anchor" aria-hidden="true" href="#1-牛顿黏性定律-newtons-law-of-viscosity">#</a></h4>
+<p>首先，从最简单的一维剪切流说起。想象两块平行板，中间是流体。下板静止，上板以速度 $U$ 移动。</p>
+<ul>
+<li><strong>现象</strong>：流体层之间会产生摩擦。靠近上板的流体速度快，靠近下板的流体速度慢，形成一个速度梯度 $\frac{du}{dy}$。</li>
+<li><strong>定律</strong>：牛顿黏性定律指出，流体层之间的<strong>剪切应力（shear stress）</strong> $\tau$ 与垂直方向上的<strong>速度梯度</strong> $\frac{du}{dy}$ 成正比。
+<ul>
+<li>$\tau = \mu \frac{du}{dy}$</li>
+</ul>
+</li>
+<li><strong>解释</strong>：<code>μ</code> 就是<strong>动力黏度</strong>（dynamic viscosity），它衡量了流体抵抗剪切变形的能力。这个定律描述了由于流速不均匀导致的内部摩擦力。</li>
+</ul>
+<h4 id="2-推广到三维应力张量和应变率张量">2. 推广到三维：应力张量和应变率张量<a hidden class="anchor" aria-hidden="true" href="#2-推广到三维应力张量和应变率张量">#</a></h4>
+<p>在三维空间中，情况变得复杂得多。流体不仅有剪切应力，还有拉伸应力；不仅有速度，还有速度场 <code>u(x, y, z)</code>。在三维流体中，应力不能再用一个简单的标量或向量来描述，而需要一个<strong>应力张量 (Stress Tensor)</strong> $\mathbf{\sigma}$。这个张量包含了流体内部所有方向上的各种应力 ； 流体微团的变形率也不能用简单的速度梯度 $\frac{du}{dy}$ 来描述，而需要一个<strong>应变率张量 (Rate of Strain Tensor)</strong> $\mathbf{e}$。这个张量包含了所有方向上的拉伸和剪切变形。 $\mathbf{e} = \frac{1}{2}(\nabla \mathbf{u} + (\nabla \mathbf{u})^T)$</p>
+<p><strong>推广的牛顿黏性定律</strong>：在各向同性牛顿流体中，黏性应力张量 $\mathbf{\tau}$ 与应变率张量 $\mathbf{e}$ 成线性关系：
+$\mathbf{\tau} = 2\mu \mathbf{e}$</p>
+<p>然后我们需要把<strong>黏性应力张量</strong> $\mathbf{\tau}$ 转化为<strong>黏性力</strong> $\mathbf{F}_{\text{viscous}}$。</p>
+<p>力是应力的<strong>散度</strong>。也就是说，<strong>黏性力等于黏性应力张量的散度</strong>。
+$\mathbf{F}_{\text{viscous}} = \nabla \cdot \mathbf{\tau}$</p>
+<p>代入公式：</p>
+<ul>
+<li>$\mathbf{F}_{\text{viscous}} = \nabla \cdot (2\mu \mathbf{e})$</li>
+<li>$\mathbf{F}_{\text{viscous}} = \nabla \cdot (\mu (\nabla \mathbf{u} + (\nabla \mathbf{u})^T))$</li>
+</ul>
+<p>对于<strong>不可压缩流体</strong>，由于质量守恒，我们有<strong>散度为零</strong>：$\nabla \cdot \mathbf{u} = 0$。这个条件可以极大地简化上述公式。</p>
+<p>经过一系列复杂的向量和张量运算（利用向量恒等式），并应用 $\nabla \cdot \mathbf{u} = 0$ 这个条件，上面的方程可以化简为：</p>
+<p>$\mathbf{F}_{\text{viscous}} = \mu \nabla^2 \mathbf{u}$</p>
+<p>由于过程太复杂所以后面再补充</p>
+<hr>
+<!-- raw HTML omitted -->
+<ul>
+<li><strong>$\mathbf{F}$</strong> (External Forces)：
+<ul>
+<li>这是<strong>外部体力</strong>，例如重力、电磁力等。这些力作用于流体的每一个微小体积上，而不是作用在表面。</li>
+</ul>
+</li>
+</ul>
+<h2 id="先研究em波再迁移到等离子体波在真空框架中引入介质效应">先研究EM波再迁移到等离子体波：在真空框架中引入介质效应<a hidden class="anchor" aria-hidden="true" href="#先研究em波再迁移到等离子体波在真空框架中引入介质效应">#</a></h2>
+<p>等离子体的行为由复杂的偏微分方程控制（如麦克斯韦方程、流体动力学方程等）。这些方程在小扰动下可以线性化，变成线性系统。所以我们只需要研究这些系统的波动解（如电磁波、离子声波、朗缪尔波等），就能理解整个系统的演化。
+任何形状的波（无论多复杂）都可以分解成一组简单的正弦/余弦平面波的叠加。在波的世界里，平面波就是“基”。</p>
+<h3 id="maxwell-equations-in-vacuum-differential-form">Maxwell Equations in Vacuum (Differential Form)<a hidden class="anchor" aria-hidden="true" href="#maxwell-equations-in-vacuum-differential-form">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Equation</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Gauss’s Law</strong></td>
+          <td>$$ \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} = 0 $$</td>
+          <td>Electric field lines originate on electric charges.</td>
+      </tr>
+      <tr>
+          <td><strong>Gauss’s Law for Magnetism</strong></td>
+          <td>$$ \nabla \cdot \mathbf{B} = 0 $$</td>
+          <td>No magnetic monopoles; magnetic field lines are continuous loops.</td>
+      </tr>
+      <tr>
+          <td><strong>Faraday’s Law</strong></td>
+          <td>$$ \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} $$</td>
+          <td>A time-varying magnetic field induces a curling electric field.</td>
+      </tr>
+      <tr>
+          <td><strong>Ampère–Maxwell Law</strong></td>
+          <td>$$ \nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} $$</td>
+          <td>Electric currents and time-varying electric fields produce curling magnetic fields.</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Constants</strong></p>
+<ul>
+<li>Vacuum permittivity: $\varepsilon_0 \approx 8.854 \times 10^{-12}\ \mathrm{F,m^{-1}}$</li>
+<li>Vacuum permeability: $\mu_0 = 4\pi \times 10^{-7}\ \mathrm{H,m^{-1}}$</li>
+</ul>
+<blockquote>
+<p>In vacuum, $\rho = 0$ and $\mathbf{J} = 0$, reducing the equations to their homogeneous form.
+$$
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} = 0
+$$</p></blockquote>
+<p>$$
+\nabla \cdot \mathbf{B} = 0
+$$
+Recall 高斯定律的物理含义：电场的散度等于电荷密度。在<strong>真空</strong>中，我们考虑的是<strong>没有自由电荷</strong>（$\rho = 0$），也就是说在真空电磁波里，电场线没有“源”或“汇”，它们只能成闭合回路或无限延伸,所以电场散度为0；而对于磁场来说，由于自然界里没有观测到“磁单极子”。磁力线总是闭合的，没有孤立的“源”。所以磁场永远是<strong>无散度的</strong>，不管在真空还是在物质中。</p>
+<h3 id="平面波假设与代数化替换">平面波假设与“代数化”替换<a hidden class="anchor" aria-hidden="true" href="#平面波假设与代数化替换">#</a></h3>
+<p>偏微分方程（PDE）往往很难直接解。但是 <strong>正弦函数（或复指数 $e^{i(kx-\omega t)}$）是线性系统的本征解（eigenfunction）</strong>。对线性微分算子来说，正弦/指数波解代入后通常会直接化简成代数方程（就是所谓的色散关系 $\omega(k)$）。所以第一步就变成 <strong>找出基本的单一平面波解</strong>。所以无论是声波、电磁波还是等离子体波，推导都会从假设波形，都会从假设一个平面波解 $e^{i(\mathbf{k}\cdot\mathbf{r} - \omega t)}$开始</p>
+<p>$$
+u(t, \mathbf{r}) = u_0 e^{i(\mathbf{k}\cdot \mathbf{r} - \omega t)}
+$$</p>
+<p>$$
+\mathbf{w}(t, \mathbf{r}) = \mathbf{w}_0 e^{i(\mathbf{k}\cdot \mathbf{r} - \omega t)}
+$$</p>
+<p>$u$ 是标量场（比如声波的压力场）。$\mathbf{w}$ 是矢量场（比如电场 $\mathbf{E}$ 或磁场 $\mathbf{B}$）。
+至于为什么要分成 $u$ 标量场 和 $w$ 矢量场是因为在等离子体理论中有些量本质上是<strong>标量</strong>（比如密度扰动、压力扰动，Langmuir 波等），有些是<strong>矢量</strong>（比如电场 $\mathbf{E}$、磁场 $\mathbf{B}$、速度 $\mathbf{v}$）。在 PDE 系统中，标量和矢量的耦合方式不同。</p>
+<p>时间导数</p>
+<p>$$
+\frac{\partial u}{\partial t} = -i\omega u
+$$</p>
+<p>对 $e^{i(\mathbf{k}\cdot \mathbf{r} - \omega t)}$ 关于 $t$ 求导，等于 $-i\omega$ 乘上自己。
+所以时间导数就等价于 $-i\omega$</p>
+<p>空间导数（梯度）</p>
+<p>$$
+\nabla u = i\mathbf{k} u
+$$</p>
+<p>对 $e^{i(\mathbf{k}\cdot \mathbf{r})}$ 求空间导数</p>
+<p>散度、旋度</p>
+<ul>
+<li>$\nabla \cdot \mathbf{w} = i \mathbf{k}\cdot \mathbf{w}$</li>
+<li>$\nabla \times \mathbf{w} = i \mathbf{k}\times \mathbf{w}$</li>
+</ul>
+<p>so</p>
+<p>$$
+\frac{\partial}{\partial t} ;;\longrightarrow;; -i\omega
+$$</p>
+<p>$$
+\nabla ;;\longrightarrow;; i\mathbf{k}
+$$</p>
+<h4 id="原本的麦克斯韦方程">原本的麦克斯韦方程<a hidden class="anchor" aria-hidden="true" href="#原本的麦克斯韦方程">#</a></h4>
+<p>$$
+\nabla \times \mathbf{E}(t,\mathbf{r}) = -\frac{\partial \mathbf{B}(t,\mathbf{r})}{\partial t}
+$$</p>
+<p>代入上面的字典：</p>
+<p>$$
+i\mathbf{k} \times \mathbf{E}(\omega, \mathbf{k}) = i\omega \mathbf{B}(\omega, \mathbf{k})
+$$</p>
+<p>这就是在傅里叶空间（频率-波数空间）里的形式。</p>
+<p>取复振幅形式</p>
+<p>$$
+\mathbf{E}(\mathbf{r},t)=\mathbf{\hat E},e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)},\qquad
+\mathbf{B}(\mathbf{r},t)=\mathbf{\hat B},e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}.
+$$</p>
+<p>则有算子替换</p>
+<p>$$
+\nabla \to i\mathbf{k},\qquad \frac{\partial}{\partial t}\to -i\omega.
+$$</p>
+<p>代入四条方程，得到<strong>代数方程</strong>：</p>
+<p>$$
+\begin{aligned}
+&amp;i\mathbf{k}\cdot\mathbf{\hat E}=0 \ \Rightarrow\ \mathbf{k}\cdot\mathbf{\hat E}=0, \
+&amp;i\mathbf{k}\cdot\mathbf{\hat B}=0 \ \Rightarrow\ \mathbf{k}\cdot\mathbf{\hat B}=0, \
+&amp;i\mathbf{k}\times\mathbf{\hat E}=-(-i\omega)\mathbf{\hat B}=i\omega\mathbf{\hat B}
+\ \Rightarrow\ \mathbf{k}\times\mathbf{\hat E}=\omega\mathbf{\hat B},\
+&amp;i\mathbf{k}\times\mathbf{\hat B}=\mu_0\varepsilon_0(-i\omega)\mathbf{\hat E}=-,i\frac{\omega}{c^2}\mathbf{\hat E}
+\ \Rightarrow\ \mathbf{k}\times\mathbf{\hat B}=-\frac{\omega}{c^2}\mathbf{\hat E}.
+\end{aligned}
+$$</p>
+<p>（上式把两边的 $i$ 消去即可。）</p>
+<p>由于：</p>
+<p>$$
+\mathbf{k} \cdot \mathbf{E}_0 = 0
+$$</p>
+<p>所以电场 $\mathbf{E}$ 必须垂直于传播方向 $\mathbf{k}$。
+磁场 $\mathbf{B}$ 也是同理。真空电磁波是 <strong>横波（transverse wave）</strong>。</p>
+<h4 id="色散关系推导步骤">色散关系推导步骤<a hidden class="anchor" aria-hidden="true" href="#色散关系推导步骤">#</a></h4>
+<ol>
+<li>由 $\mathbf{k}\times \mathbf{E}=\omega \mathbf{B}$ 得</li>
+</ol>
+<p>$$
+\mathbf{B}=\frac{1}{\omega},\mathbf{k}\times \mathbf{E}.
+$$</p>
+<ol start="2">
+<li>代入另一条旋度式：</li>
+</ol>
+<p>$$
+\mathbf{k}\times \mathbf{B}
+=\mathbf{k}\times!\left(\frac{1}{\omega},\mathbf{k}\times \mathbf{E}\right)
+=\frac{1}{\omega},\big[\mathbf{k}\times(\mathbf{k}\times \mathbf{E})\big].
+$$</p>
+<ol start="3">
+<li>用向量恒等式</li>
+</ol>
+<p>$$
+\mathbf{k}\times(\mathbf{k}\times \mathbf{E})
+=\mathbf{k}(\mathbf{k}\cdot \mathbf{E})-\mathbf{E}(\mathbf{k}\cdot \mathbf{k})
+=\underbrace{\mathbf{k}(\mathbf{k}\cdot \mathbf{E})}_{=,0}-k^{2}\mathbf{E}
+=-k^{2}\mathbf{E},
+$$</p>
+<p>其中用了 $\mathbf{k}\cdot\mathbf{E}=0$。</p>
+<p>于是</p>
+<p>$$
+\mathbf{k}\times \mathbf{B}=\frac{1}{\omega},(-k^{2}\mathbf{E})=-\frac{k^{2}}{\omega}\mathbf{E}.
+$$</p>
+<ol start="4">
+<li>但另一边由麦克斯韦方程有</li>
+</ol>
+<p>$$
+\mathbf{k}\times \mathbf{B}=-\frac{\omega}{c^{2}}\mathbf{E}.
+$$</p>
+<ol start="5">
+<li>两式相等，消去负号与 $\mathbf{E}$：</li>
+</ol>
+<p>$$
+\frac{k^{2}}{\omega}=\frac{\omega}{c^{2}}
+\ \Longrightarrow\
+\omega^{2}=k^{2}c^{2}
+$$</p>
+<p>这说明真空中的电磁波<strong>非色散</strong>：$\omega = ck$，所有频率成分都以同一相速 $c$ 传播。</p>
+<p>同理，下面用 $\mathbf{\hat B}$ 推到色散关系</p>
+<p>$$
+\mathbf{\hat E}
+= -,\frac{c^2}{\omega},\mathbf{k}\times\mathbf{\hat B}.
+$$</p>
+<p>代回第三式 $\mathbf{k}\times\mathbf{\hat E}=\omega\mathbf{\hat B}$：</p>
+<p>$$
+\mathbf{k}\times\mathbf{\hat E}
+=\mathbf{k}\times\Big(-,\frac{c^2}{\omega},\mathbf{k}\times\mathbf{\hat B}\Big)
+= -,\frac{c^2}{\omega},\mathbf{k}\times(\mathbf{k}\times\mathbf{\hat B})
+=\omega\mathbf{\hat B}.
+$$</p>
+<p>现在用向量恒等式（你文中提到的）：</p>
+<p>$$
+\mathbf{A}\times(\mathbf{B}\times\mathbf{C})
+= \mathbf{B}(\mathbf{A}\cdot\mathbf{C})-\mathbf{C}(\mathbf{A}\cdot\mathbf{B}).
+$$</p>
+<p>令 $\mathbf{A}=\mathbf{k},\ \mathbf{B}=\mathbf{k},\ \mathbf{C}=\mathbf{\hat B}$，得</p>
+<p>$$
+\mathbf{k}\times(\mathbf{k}\times\mathbf{\hat B})
+= \mathbf{k}(\mathbf{k}\cdot\mathbf{\hat B}) - \mathbf{\hat B}(\mathbf{k}\cdot\mathbf{k})
+= -,k^2,\mathbf{\hat B},
+$$</p>
+<p>因为上一步已由 $\nabla\cdot\mathbf{B}=0\Rightarrow \mathbf{k}\cdot\mathbf{\hat B}=0$。</p>
+<p>于是</p>
+<p>$$
+-,\frac{c^2}{\omega},\big[\mathbf{k}\times(\mathbf{k}\times\mathbf{\hat B})\big]
+= -,\frac{c^2}{\omega},(-k^2\mathbf{\hat B})
+= \frac{c^2 k^2}{\omega},\mathbf{\hat B}
+= \omega\mathbf{\hat B}.
+$$</p>
+<p>移项（$\mathbf{\hat B}\neq 0$ 为非平凡解）：</p>
+<p>$$
+\frac{c^2 k^2}{\omega}=\omega
+\quad\Longrightarrow\quad
+\omega^2=c^2 k^2.
+$$</p>
+<p>这就是<strong>色散关系</strong>。同时也再次看出极化条件
+$\mathbf{k}\cdot\mathbf{\hat B}=0$，即 $\mathbf{B}\perp\mathbf{k}$（横波）。</p>
+<p>现在学习一个新东西，波动方程。在maxwell的第三四个方程里，E和B是耦合在一起的。所以我们要take Maxwell equation for the curl of the E field and decouple it，就是把原来耦合在一起的场量（E、B、J、ρ）拆散，让方程只含一个未知量——通常是把 E 的旋度方程单独化成只含 E（或只含 B）的波动方程，而不再同时出现 E 和 B 两个场。</p>
+<h4 id="起点麦克斯韦第三方程法拉第感应定律">起点：麦克斯韦第三方程（法拉第感应定律）<a hidden class="anchor" aria-hidden="true" href="#起点麦克斯韦第三方程法拉第感应定律">#</a></h4>
+<p>$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+$$</p>
+<p>两侧再取旋度 $\mathbf{\nabla\times }$
+$$
+\nabla \times (\nabla \times \mathbf{E}) = \nabla \times \left(-\frac{\partial \mathbf{B}}{\partial t}\right)
+$$
+把右侧时间导数提到最前
+$$
+\nabla \times (\nabla \times \mathbf{E}) = -\frac{\partial}{\partial t},(\nabla \times \mathbf{B})
+$$
+用麦克斯韦第四方程（安培–麦克斯韦定律）替换 $\nabla \times \mathbf{B}$
+$$
+\nabla \times \mathbf{B} = \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+$$
+代入得
+$$
+\nabla \times (\nabla \times \mathbf{E}) = -\frac{\partial}{\partial t}\left(\mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)
+$$
+把常数 $\mu_0\varepsilon_0$ 提出，合并成二阶时间导数
+$$
+\nabla \times (\nabla \times \mathbf{E}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
+$$
+现在化简完了右侧。左侧用矢量恒等式化简恒等式：
+$$
+\nabla \times (\nabla \times \mathbf{F}) = \nabla(\nabla \cdot \mathbf{F}) - \nabla^2 \mathbf{F}
+$$</p>
+<p>令 $\mathbf{F} = \mathbf{E}$：
+$$
+\nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E} = -\mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
+$$
+由于真空无自由电荷 $\nabla \cdot \mathbf{E} = 0$
+$$
+-\nabla^2 \mathbf{E} = -\mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
+$$
+最终得到真空中的wave equation
+$$
+\nabla^2 \mathbf{E} - \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
+$$
+或写成
+$$
+\boxed{\frac{\partial^2 \mathbf{E}}{\partial t^2} = \frac{1}{\mu_0 \varepsilon_0}\nabla^2 \mathbf{E}}
+$$
+附：波速$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$</p>
+<p>The derivation of the wave equation for B field is analogous, we&rsquo;ll get the exactly the  same equation, only hat instead of the letter E, we&rsquo;ll get the B in the wave equation</p>
+<blockquote>
+<p>备注：所以上面那个色散关系的推导若用 <strong>波动方程</strong> 也能得到同样结果代平面波即给 $\omega^2=c^2k^2$。
+两种方法等价。</p></blockquote>
+<!-- raw HTML omitted -->
+<p>$$
+,\nabla^2\mathbf{B} = \mu_0\varepsilon_0,\frac{\partial^2\mathbf{B}}{\partial t^2}.
+$$</p>
+<p>用 $c^2=\dfrac{1}{\mu_0\varepsilon_0}$：</p>
+<p>$$
+\nabla^2\mathbf{B} = \frac{1}{c^2},\frac{\partial^2\mathbf{B}}{\partial t^2}.
+$$</p>
+<p>这就是B的 <strong>矢量波动方程</strong>：</p>
+<p>$$
+\boxed{\ \nabla^2\mathbf{B} - \frac{1}{c^2},\frac{\partial^2\mathbf{B}}{\partial t^2}=0\ }.
+$$
+现在用平面波解法得到色散关系</p>
+<p>取平面波试探解（相位约定均与前文相同）：</p>
+<p>$$
+\mathbf{B}(\mathbf{r},t)=\hat{\mathbf{B}},e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}.
+$$</p>
+<p>算子替换：</p>
+<p>$$
+\nabla^2\to -k^2,\qquad \partial_t^2\to -\omega^2.
+$$</p>
+<p>代入波动方程：</p>
+<p>$$
+(-k^2)\hat{\mathbf{B}} - \frac{1}{c^2}(-\omega^2)\hat{\mathbf{B}} = 0
+\quad\Longrightarrow\quad
+(-k^2+\frac{\omega^2}{c^2})\hat{\mathbf{B}}=0.
+$$</p>
+<p>非平凡解要求括号为零：</p>
+<p>$$
+\boxed{\ \omega^2 = c^2 k^2\ }.
+$$</p>
+<p>这就是与之前相同的色散关系。</p>
+<p>所以跟上面那种方法比较，用波动方程推导的步骤更短：推到 $\nabla^2\mathbf{B}-(1/c^2)\partial_t^2\mathbf{B}=0$，再代入平面波解即可得到 $\omega^2=c^2k^2$。这一路径和“直接用两个旋度方程并消去 $\mathbf{E}$”的做法是等价的，只是代数顺序不同。</p>
+<!-- raw HTML omitted -->
+<p>⭐其实找色散关系的这个过程也就是找非零解的过程。</p>
+<p>无源场的基本方程，比如在真空（没有电荷、没有电流）的 Maxwell 方程，可以推导出电场满足波动方程：</p>
+<p>$$
+\nabla^2 \mathbf{E} - \frac{1}{c^2} \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
+$$</p>
+<p>这是一个 <strong>齐次方程</strong>（右边 = 0，没有源项）。<strong>无源场</strong> → 方程是齐次的。它总有一个 <strong>平凡解</strong> ($\mathbf{E}=0, \mathbf{B}=0$); 它可能有 <strong>非零波动解</strong>，但前提是 $\omega, k$ 必须满足色散关系，否则就不成立。</p>
+<p>❓ 如果没有外部电流/电荷在驱动那这些自由波什么的还怎么被激发</p>
+<ul>
+<li>无源 (source-free) 方程指的是 在当前方程里没有源项。但这并不排除初始条件或边界条件。无源只意味着方程里没有持续的外部驱动力，不代表没有波。波可以通过初始条件或边界条件被激发，然后就以自由波的形式传播。</li>
+</ul>
+<p>另外，在等离子体中，电磁波的折射率𝜇(𝑘)取决于频率w。因此，不同频率的波在等离子体边界会被不同程度地偏折、反射或透射。</p>
+<hr>
+<p>？ 为什么一定要经过色散关系的加工 ？</p>
+<p>做傅里叶展开时，只是把<strong>初始时刻</strong>的复杂扰动写成很多正弦（或复指数）平面波的叠加。  相当于给每个频率/波数分量都贴了个标签 (k)，但还没说这些分量之后会<strong>怎么动</strong>。
+<strong>时间演化的相位</strong>是 $\phi(t) = kx - \omega t$,  如果不知道 $\omega$，就无法预测这个分量过了一段时间后相位转了多少、形状变成什么样。而色散关系就解决了这个”怎么动”的问题</p>
+<hr>
+<p>本节总结：所以为什么要先研究EM波作为研究等离子体波的基础</p>
+<ul>
+<li>当传播介质从真空换成等离子体，麦克斯韦方程右端多了<strong>等离子体的响应</strong>（电荷密度、流密度项）。再配合流体方程或 Vlasov 方程，构成“麦克斯韦 + 粒子动力学”的闭合系统。仍然假设解是平面波形式，把它代入这些方程，利用相同的代数技巧，这样会得到新的色散关系，例如冷等离子体横波：
+$$
+\omega^2 = \omega_p^2 + c^2 k^2
+$$
+它就是 EM 波在等离子体中的修正版，$\omega_p$ 来自电子的集体振荡。</li>
+</ul>
+<h3 id="波的极化偏振">波的极化/偏振<a hidden class="anchor" aria-hidden="true" href="#波的极化偏振">#</a></h3>
+<p>1.概念</p>
+<p>电磁波或等离子体波，本质上都是振荡场矢量（电场 E、磁场 B 或速度扰动 v 等）在空间传播的过程。设波沿 $z$ 方向传播，电场在横向平面 $(x,y)$ 内可写为：</p>
+<p>$$
+\mathbf{E}<em>\perp (t) =
+\begin{bmatrix}
+E</em>{0x} \cos(\omega t) \
+E_{0y} \cos(\omega t + \delta)
+\end{bmatrix}
+$$</p>
+<p>其中$E_{0x}, E_{0y}$：两个方向上的振幅;  $\delta$是相位差</p>
+<p>随着时间变化，点 $(E_x(t),E_y(t))$ 在平面上描出的轨迹就是<strong>极化轨迹</strong>。</p>
+<p>&lt; 不同极化形式 &gt;</p>
+<ul>
+<li>
+<p><strong>线极化</strong>：$\delta = 0$ 或 $\pi$，轨迹为直线</p>
+</li>
+<li>
+<p><strong>圆极化</strong>：$E_{0x} = E_{0y}$，且 $\delta = \pm \pi/2$，轨迹为圆</p>
+<ul>
+<li>$\delta = +\pi/2$：左旋圆极化 (L)</li>
+<li>$\delta = -\pi/2$：右旋圆极化 (R)</li>
+</ul>
+</li>
+<li>
+<p><strong>椭圆极化</strong>：一般情况下（振幅不等，相位差不是正好 ±𝜋/2），轨迹就是一个椭圆。椭圆是最一般的情形，圆极化和线极化都是它的特例。</p>
+</li>
+</ul>
+<p>&lt; 自由度 &gt;：<strong>独立的变量数目</strong>，可以用来描述系统状态。</p>
+<ul>
+<li>一个质点在二维平面运动 → 2 个自由度（$x,y$）</li>
+<li>一个单色平面波传播 → 除了频率、波矢之外，还要知道它的<strong>场矢量方向</strong>。</li>
+</ul>
+<p>$$
+\text{偏振自由度} =
+\begin{cases}
+\text{幅度/相位选择（线性 vs 圆偏振）}\[4pt]
+\text{旋转方向（左旋 vs 右旋）}
+\end{cases}
+$$</p>
+<p>两个独立的基矢量：</p>
+<ul>
+<li>$\mathbf{e}_R = \frac{1}{\sqrt{2}}(1,-i)$ （右旋）</li>
+<li>$\mathbf{e}_L = \frac{1}{\sqrt{2}}(1,+i)$ （左旋）</li>
+</ul>
+<p>任意横向电场都可以写成它们的线性组合：</p>
+<p>$$
+\mathbf{E}(t) = a_R \mathbf{e}_R e^{-i\omega t} + a_L \mathbf{e}_L e^{-i\omega t}.
+$$</p>
+<hr>
+<p>承上启下：<strong>不同偏振就是不同的本征模</strong>。</p>
+<p>在磁化等离子体中：
+R 模（右旋）和 L 模（左旋）的色散关系不同；它们和电子/离子的回旋运动耦合方式也不同（电子喜欢右旋，离子喜欢左旋）</p>
+<hr>
+<ol start="2">
+<li>本征模</li>
+</ol>
+<p>在等离子体波动推导中，我们通常得到一个关于扰动电场 $\mathbf{E}$ 的线性代数方程：</p>
+<p>$$
+\mathbf{D}(\omega,\mathbf{k}) \cdot \mathbf{E} = 0
+$$</p>
+<p>这里$\mathbf{D}$ 是一个 <strong>色散矩阵</strong>，由介电张量 $\epsilon_{ij}$ 和波矢 $\mathbf{k}$ 组合而来；$\mathbf{E}$ 是未知的扰动电场向量。</p>
+<p>这其实就是一个 <strong>齐次线性方程组</strong>。
+$$
+A\mathbf{x} = 0
+$$</p>
+<p>如果想要这个方程有non trival solution，那必须满足
+$$
+\det|A| = 0.
+$$</p>
+<p>因此，<strong>色散矩阵行列式为零就是波存在的条件</strong>。这个条件给出了<strong>色散关系</strong> $\omega(\mathbf{k})$。</p>
+<p>至于为什么是 $\mathbf{D}\cdot \mathbf{E}$？将后续在这里补充</p>
+<p>说了那么多，总之，解那个齐次行列式就可以得到得到本征值。极化向量 $\mathbf{E}$ 是本征矢量，色散关系 $\omega(k)$ 是本征值。
+对任意解 $(\omega, \mathbf{k})$，不仅得到色散关系 $\omega(k)$，还得到本征矢量 $\mathbf{E}$，它决定了极化。</p>
+<p>所以一般过程大概就是先看<strong>色散关系本身</strong>：给你频率 $\omega(k)$，告诉你波速、频率范围等。然后就通过解出的本征矢量（场分量的比值与相位差）判断极化特征。比如说
+$$
+\frac{E_y}{E_x} = \pm i.
+$$</p>
+<p>在这个例子里面，对于 R 模，$E_y = -iE_x$，即相位差 $-90^\circ$，对应 <strong>右旋圆极化</strong>，对于 L 模，$E_y = +iE_x$，即相位差 $+90^\circ$，对应 <strong>左旋圆极化</strong></p>
+<p>😓但这个一般过程的实际计算过程好像有点复杂，这里先不展开了</p>
+<p>很多等离子体波模式里的<strong>频率区间和极化对应关系</strong>如下：</p>
+<ul>
+<li>$\omega &lt; \Omega_i$ → Alfvén 波  什么极化不知道啊  看有的文章里说是线极化有的说是椭圆 圆极化</li>
+<li>$\omega \approx \Omega_i$ → Ion Cyclotron 波（左旋）</li>
+<li>$\omega \ll \Omega_e$，但高于 $\Omega_i$ → Whistler 波（右旋）</li>
+<li>$\omega \gg \Omega_e$ → 光波极限，左右手对称</li>
+</ul>
+<h4 id="观测系里的极化变换多普勒效应">观测系里的极化变换（多普勒效应）<a hidden class="anchor" aria-hidden="true" href="#观测系里的极化变换多普勒效应">#</a></h4>
+<p>航天器处于太阳风流中，因此它观测到的波并不是 plasma frame 的频率，而是 <strong>Doppler-shifted frequency</strong>：</p>
+<p>$$
+\omega_{\text{sc}} = \omega_{\text{plasma}} + \mathbf{k}\cdot \mathbf{V}_{sw},
+$$</p>
+<p>其中$\omega_{\rm plasma}$是波在等离子体共动参考系下的本征频率</p>
+<p>在高速太阳风条件下，对 ULF 波，等离子体本征频率很低：
+$\omega_{\rm plasma} \sim 1\ \text{mHz} = 2\pi\times 10^{-3}\ \text{s}^{-1}$</p>
+<p>太阳风流速大： $V_{sw} \sim 400\ \text{km/s}$， 波矢可能很小（长波长 mHz 波），但 $\mathbf{k}\cdot\mathbf{V}<em>{sw}$ = $k V</em>{sw}\cos\theta$ 依然可以<strong>大于 $|\omega_{\rm plasma}|$</strong>
+$$
+|\mathbf{k}\cdot \mathbf{V}<em>{sw}| \gg |\omega</em>{\rm plasma}|
+$$</p>
+<p>假设波沿 <strong>逆太阳风方向传播</strong>（波矢与太阳风速度方向相反），则：</p>
+<p>$$
+\mathbf{k}\cdot \mathbf{V}_{sw} &lt; 0
+$$</p>
+<p>此时飞船观测频率：</p>
+<p>$$
+\omega_{sc} = \omega_{\rm plasma} + \underbrace{\mathbf{k}\cdot\mathbf{V}<em>{sw}}</em>{\text{大而负}}
+$$</p>
+<p>如果 $|\mathbf{k}\cdot\mathbf{V}<em>{sw}| &gt; |\omega</em>{\rm plasma}|$：</p>
+<p>$$
+\omega_{sc} \approx \omega_{\rm plasma} - |\mathbf{k}\cdot\mathbf{V}_{sw}| &lt; 0
+$$</p>
+<p>所以这种情况下即使波在等离子体参考系是正向振荡（$\omega_{\rm plasma}&gt;0$），在飞船参考系下看起来是<strong>负频率</strong> → 表示观测到的波<strong>相位反转</strong>。</p>
+<p>就比如在船上向上游看（与波矢反向），高速河流的对流速度可能盖过波本身的振荡，使得波的<strong>相位似乎倒过来了</strong>。就是相对运动而已，这样就会导致<strong>观测到的极化方向反转</strong>：即本征左手波，在 spacecraft frame 里表现为右手（或者反之）。</p>
+<h2 id="plasma-waves等离子体波">Plasma Waves（等离子体波）<a hidden class="anchor" aria-hidden="true" href="#plasma-waves等离子体波">#</a></h2>
+<p>定义： 等离子体波是存在于等离子体中的波动，它们不仅涉及电磁场，还涉及粒子的集体运动（如电子和离子）。等离子体波具有复杂结构，是电磁特性与机械特性的耦合结果。例如，声波在等离子体中也会激发电磁场，从而变成“部分电磁”的波动。</p>
+<p>常见类型包括：</p>
+<p>朗缪尔波（Langmuir waves）：高频电子密度波。</p>
+<p>离子声波（Ion acoustic waves）：低频声波，涉及离子和电子的协同运动。</p>
+<p>Alfvén 波：磁场引导的低频波，在磁化等离子体中传播。</p>
+<table>
+  <thead>
+      <tr>
+          <th>波型</th>
+          <th>色散关系</th>
+          <th>特点</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Langmuir 波</strong></td>
+          <td>$\omega^2 = \omega_{pe}^2 + 3 k^2 v_{te}^2$</td>
+          <td>高频，近似无磁场依赖，电子主导</td>
+      </tr>
+      <tr>
+          <td><strong>Alfvén 波</strong></td>
+          <td>$\omega = k_\parallel v_A$</td>
+          <td>无色散（理想MHD下），传播沿磁力线</td>
+      </tr>
+      <tr>
+          <td><strong>离子回旋波 (ICW)</strong></td>
+          <td>$\omega^2 = k^2 v_A^2 + \Omega_{ci}^2$ 附近</td>
+          <td>在 $\Omega_{ci}$ 附近强烈共振</td>
+      </tr>
+      <tr>
+          <td><strong>磁声波 (快模)</strong></td>
+          <td>$\omega^2 = k^2 (v_A^2 + c_s^2)$</td>
+          <td>色散弱，压缩性强</td>
+      </tr>
+      <tr>
+          <td><strong>磁声波 (慢模)</strong></td>
+          <td>$\omega^2 = k_\parallel^2 c_s^2 v_A^2 /(c_s^2+v_A^2)$</td>
+          <td>沿磁场传播，低频</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="待详细补充这部分">待详细补充这部分<a hidden class="anchor" aria-hidden="true" href="#待详细补充这部分">#</a></h2>
+<h2 id="mhd">MHD<a hidden class="anchor" aria-hidden="true" href="#mhd">#</a></h2>
+<p>MHD把等离子体看作一种<strong>导电流体</strong>，类似汞在磁场中的行为。在这个模型中总是满足电中性：在任意体积元里，正负电荷总量相等。  $$\rho_q = e(n_i - n_e) \approx 0 $$
+这意味着电场不是主要由电荷积累产生的。
+$$\mathbf{J} = \sum_s q_s n_s \mathbf{v}_s$$
+$$\mathbf{J} = e n_i \mathbf{v}_i - e n_e \mathbf{v}_e$$
+但是只要 <strong>电子和离子的速度不一样</strong>（哪怕数密度一样），就会有电流。</p>
+<ul>
+<li>单个带电粒子在磁场中的洛伦兹力：
+$$\mathbf{F} = q,\mathbf{v} \times \mathbf{B}$$</li>
+<li>等离子体里有很多电子和离子，所以单位体积内的总力：
+$$\mathbf{F}_{\text{total}} = n_i e,\mathbf{v}_i \times \mathbf{B} + n_e (-e),\mathbf{v}<em>e \times \mathbf{B}$$
+$$\mathbf{F}</em>{\text{total}} = \mathbf{j} \times \mathbf{B}$$
+这就是 MHD 中著名的<strong>磁张力 / 磁压力力</strong>，也是磁场和流体之间动量交换的主要方式。</li>
+</ul>
+<p>$$\rho_m(\mathbf{r},t) \frac{d\mathbf{v}(\mathbf{r},t)}{dt}
+= -\nabla p(\mathbf{r},t) + \mathbf{j}(\mathbf{r},t) \times \mathbf{B}(\mathbf{r},t)$$</p>
+<h2 id="待补充">待补充<a hidden class="anchor" aria-hidden="true" href="#待补充">#</a></h2>
+<h2 id="dayside">Dayside<a hidden class="anchor" aria-hidden="true" href="#dayside">#</a></h2>
+<h3 id="太阳风在空间中的传播形式">太阳风在空间中的传播形式<a hidden class="anchor" aria-hidden="true" href="#太阳风在空间中的传播形式">#</a></h3>
+<ul>
+<li>
+<p><strong>Parker Spiral（帕克螺旋）</strong>  IMF与太阳风速度夹角（“圆锥角”）约45–60°</p>
+</li>
+<li>
+<p><strong>Radial IMF（径向 IMF）</strong>  ：IMF几乎与太阳风速度对齐（小圆锥角，常取 &lt;10–30°）。</p>
+</li>
+</ul>
+<p><img alt="alt text" loading="lazy" src="IMF.png"></p>
+<ul>
+<li>
+<p>准平行激波：宽大的 foreshock，离子反射显著，波动强烈</p>
+</li>
+<li>
+<p>准垂直激波磁场几乎贴着激波面。离子大多被压缩进去，反射少。foreshock 很窄甚至没有，离子主要压缩进入下游</p>
+</li>
+</ul>
+<p>在火星这种无全球偶极磁场的行星上，太阳风先在弓激波（bow shock）处被减速、加热和压缩——这种通过激波后的太阳风物质称为<strong>shocked solar wind plasma</strong>（激波后的太阳风等离子体）。<br>
+在弓激波之后、到达电离层顶端之前，会形成<strong>磁屏障/磁堆积层</strong>。它的作用之一就是<strong>把这些高温、高速的太阳风等离子体，与下方冷而稠密的火星电离层离子（主要是 O⁺、O₂⁺ 等，低温低速）区分开来</strong>。</p>
+<hr>
+<h2 id="rankinehugoniot-conditions-激波是什么-一个速度和磁场的不连续层">Rankine–Hugoniot Conditions （激波是什么？ 一个速度和磁场的不连续层）<a hidden class="anchor" aria-hidden="true" href="#rankinehugoniot-conditions-激波是什么-一个速度和磁场的不连续层">#</a></h2>
+<ul>
+<li><strong>背景</strong>：R–H 条件描述的是 <strong>守恒方程在激波面上的间断条件</strong>。</li>
+<li><strong>物理意义</strong>：激波是一个非常薄的过渡层（厚度约为离子尺度），在宏观上可视为一个<strong>不连续面</strong>。R–H 条件给出了跨越该不连续面前后物理量的跳跃关系。</li>
+</ul>
+<p>推导思路：</p>
+<p>我们考虑一个控制体积，体积由激波面（法向量 <strong>n</strong>）分隔，应用<strong>守恒定律</strong>：</p>
+<ol>
+<li>
+<p>质量守恒
+$$[\rho (\mathbf{u} \cdot \mathbf{n})] = 0$$
+即：$$\rho_1 u_{1n} = \rho_2 u_{2n}$$</p>
+</li>
+<li>
+<p>动量守恒
+$$\left[ \rho \mathbf{u} u_n + p\mathbf{n} \right] = 0$$</p>
+</li>
+</ol>
+<p>分解到<strong>法向</strong>和<strong>切向</strong>方向：</p>
+<p>法向：
+$$
+\rho_1 u_{1n}^2 + p_1 = \rho_2 u_{2n}^2 + p_2
+$$</p>
+<p>切向：
+$$
+\rho_1 u_{1n} u_{1t} = \rho_2 u_{2n} u_{2t}
+$$</p>
+<ol start="3">
+<li>能量守恒</li>
+</ol>
+<p>$$
+\left[ \left( \frac{1}{2}\rho u^2 + \frac{\gamma}{\gamma-1}p \right) u_n \right] = 0
+$$</p>
+<h1 id="frac12u_12--fracgammagamma-1fracp_1rho_1">（流体 Rankine–Hugoniot 关系）
+$$
+\frac{1}{2}u_1^2 + \frac{\gamma}{\gamma-1}\frac{p_1}{\rho_1}</h1>
+<p>\frac{1}{2}u_2^2 + \frac{\gamma}{\gamma-1}\frac{p_2}{\rho_2}
+$$</p>
+<hr>
+<p>MHD 扩展（磁流体 Rankine–Hugoniot 条件）</p>
+<p>在等离子体中，除了质量、动量、能量守恒外，还要考虑 <strong>磁场的边界条件</strong>（来自 Maxwell 方程）：</p>
+<ol>
+<li>质量守恒</li>
+</ol>
+<p>$$
+[\rho u_n] = 0
+$$
+2. 法向磁场连续
+$$[B_n] = 0$$
+3. 法向动量守恒
+$$
+\left[\rho u_n^2 + p + \frac{B_t^2}{2\mu_0}\right] = 0
+$$
+4. 切向动量守恒
+$$
+[\rho u_n u_t - \frac{B_n B_t}{\mu_0}] = 0
+$$
+5. 切向电场连续
+$$
+[u_n B_t - u_t B_n] = 0
+$$
+6. 能量守恒（含磁场能量）
+$$
+\left[ \left(\frac{1}{2}\rho u^2 + \frac{\gamma}{\gamma-1}p + \frac{B^2}{2\mu_0}\right)u_n - \frac{B_n}{\mu_0}(\mathbf{u}\cdot \mathbf{B}) \right] = 0
+$$</p>
+<ul>
+<li>
+<p><strong>弓激波（Bow Shock）</strong>：</p>
+<ul>
+<li>
+<p>火星、地球前方的太阳风弓激波满足 R–H 条件。</p>
+</li>
+<li>
+<p><strong>压缩比</strong>：</p>
+<p>$$
+\frac{\rho_2}{\rho_1} \leq \frac{\gamma+1}{\gamma-1}
+$$</p>
+<p>对于理想单原子气体（γ=5/3），上限为 4。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>磁鞘（Magnetosheath）</strong>：</p>
+<ul>
+<li>通过 R–H 条件可以估算磁鞘中密度、温度、速度、磁场的变化。</li>
+<li>例如：上游密度 $n_1 \sim 5,\text{cm}^{-3}$，下游可能增加到 $n_2 \sim 15–20,\text{cm}^{-3}$。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="太阳风接触激波的时候会发生什么">太阳风接触激波的时候会发生什么<a hidden class="anchor" aria-hidden="true" href="#太阳风接触激波的时候会发生什么">#</a></h3>
+<h4 id="反弹的机制">反弹的机制<a hidden class="anchor" aria-hidden="true" href="#反弹的机制">#</a></h4>
+<p>首先，太阳风中存在一个对流电场。对流电场的来源主要由带电流体的运动在磁场中产生（或在惯性系中伴随磁场流动而出现的有效电场）。（理想 MHD）：</p>
+<p>$$
+\mathbf{E} = -\mathbf{V}_{sw}\times\mathbf{B}.
+$$</p>
+<p>若 IMF 接近径向（即 $\mathbf{B}$ 与太阳风速度 $\mathbf{V}<em>{sw}$ 平行或反平行），则 $\mathbf{V}</em>{sw}\times\mathbf{B}\approx 0$ ⇒ $\mathbf{E}$ 非常小。
+所以在径向 IMF 条件下对流电场本身很弱。</p>
+<p>激波是一个动边界条件，它会反射一部分粒子。反射方式和弓激波前方太阳风离子流的速度，IMF方向，激波面法向的夹角关系紧密。</p>
+<p>有些离子因为下列机制被反弹：</p>
+<ol>
+<li><strong>镜像效应 (magnetic mirror)</strong>：</li>
+</ol>
+<p>磁矩守恒（first adiabatic invariant）</p>
+<p>$$
+\mu = \frac{m v_\perp^2}{2 B} \quad
+$$</p>
+<p>当粒子从激波上游进入激波 transition region，磁场强度 $B$ 快速增强。由于 $\mu$ 要保持不变：</p>
+<p>$$
+\frac{v_\perp^2}{B} \approx \text{常数}
+$$</p>
+<p>所以如果 $B$ 增大，则 $v_\perp$ 必须增加。</p>
+<p>但是粒子总能量</p>
+<p>$$
+E = \frac{1}{2}m (v_\perp^2 + v_\parallel^2)
+$$</p>
+<p>是守恒的。
+→ 所以 $v_\parallel^2$ 必须减小来补偿 $v_\perp$ 的增大。
+当 $v_\parallel \to 0$ 并继续“被迫变成负值”时，离子就会被 <strong>磁镜反射</strong>，回流上游。
+$$
+\sin^2 \alpha_0 &gt; \frac{B_0}{B_{\max}}
+$$</p>
+<p>其中 $\alpha_0$ 是入射 pitch angle，$B_0$ 是上游磁场，$B_{\max}$ 是激波处磁场。
+满足条件的粒子会反射，形成 <strong>beam/环束分布</strong>。</p>
+<ol start="2">
+<li><strong>电势反射（Cross-shock potential）</strong></li>
+</ol>
+<p>激波前沿存在一个电势差 $\Delta \Phi$，通常 $100 ,\text{eV} - 1 ,\text{keV}$。
+来源于激波前沿电荷分离，导致 <strong>cross-shock electric field</strong>。</p>
+<p>沿激波法向 $x$方向考虑：
+$$\frac{dE_x}{dx} = \frac{\rho_{\rm charge}(x)}{\varepsilon_0} = \frac{e(n_i - n_e)}{\varepsilon_0}$$
+当 $n_i \neq n_e$（哪怕是 1% 的差别），就会在该位置产生法向电场 $E_x$。
+这个跨激波电场（cross-shock electric field）会在 shock normal 方向上可能是起一个减速/加速离子，让它们更快匹配电子的速度变化的作用吧？？？。</p>
+<p>沿激波法向 $n$ 的能量守恒：</p>
+<p>$$
+\frac{1}{2} m v_n^2 - q \Delta \Phi = \text{常数}
+$$</p>
+<p>如果入射离子的动能在法向分量不足以克服电势垒：</p>
+<p>$$
+\frac{1}{2} m v_n^2 &lt; q \Delta \Phi
+$$</p>
+<p>则它会被减速到零，再被反弹回去。</p>
+<hr>
+<h4 id="反射离子会怎样运动">反射离子会怎样运动<a hidden class="anchor" aria-hidden="true" href="#反射离子会怎样运动">#</a></h4>
+<p>洛伦兹力在垂直方向展开：</p>
+<p>$$
+m \dot{v}_x = q E + q v_y B \quad\Rightarrow\quad \dot{v}_x = \frac{q}{m} E + \Omega v_y
+$$</p>
+<p>$$
+m \dot{v}_y = -q v_x B \quad\Rightarrow\quad \dot{v}_y = - \Omega v_x
+$$</p>
+<p>其中 $\Omega = \frac{qB}{m}$ 是回旋频率。</p>
+<p>引入复速度 $u = v_x + i v_y$是用来把两条耦合的一阶方程合成一条单一方程，更容易求解。</p>
+<p>原来的耦合方程：</p>
+<p>$$
+\begin{cases}
+\dot v_x = \frac{q}{m} E + \Omega v_y\
+\dot v_y = - \Omega v_x
+\end{cases}
+$$</p>
+<p>可以写成复数形式：</p>
+<p>$$
+u = v_x + i v_y
+$$</p>
+<p>于是耦合方程就能变成一个一阶线性常微分方程，这里的 $i$ 只是数学符号，用来把 $x$ 和 $y$ 的耦合旋转统一表示，不代表任何物理复数粒子。这样解出来之后，用实部和虚部分别表示 $v_x$ 和 $v_y$：</p>
+<p>$$
+v_x = \mathrm{Re}(u),\quad v_y = \mathrm{Im}(u)
+$$
+现在试着解一下：</p>
+<p>$$
+\dot u=\dot v_x+i\dot v_y
+=\Omega\frac{E}{B}+\Omega v_y+i(-\Omega v_x)
+=\Omega\frac{E}{B}-i\Omega(v_x+ i v_y)
+=\Omega\frac{E}{B}-i\Omega u.
+$$</p>
+<p>整理得一阶线性常微分方程</p>
+<p>$$
+\dot u + i\Omega u = \Omega\frac{E}{B}.
+$$</p>
+<p>这是标准形式，解法用积分因子 $e^{i\Omega t}$：</p>
+<p>$$
+\frac{d}{dt}\big(u e^{i\Omega t}\big)=\Omega\frac{E}{B} e^{i\Omega t}.
+$$</p>
+<p>积分得</p>
+<p>$$
+u e^{i\Omega t}=\Omega\frac{E}{B}\int_0^t e^{i\Omega s}ds + C
+=\Omega\frac{E}{B}\cdot\frac{e^{i\Omega t}-1}{i\Omega}+C
+=-i\frac{E}{B}(e^{i\Omega t}-1)+C.
+$$</p>
+<p>两边乘回 $e^{-i\Omega t}$：</p>
+<p>$$
+u(t)=-i\frac{E}{B}+C e^{-i\Omega t}.
+$$</p>
+<p>用初始条件 $v_x(0)=0,\ v_y(0)=0\Rightarrow u(0)=0$：</p>
+<p>$$
+0=-i\frac{E}{B}+C \quad\Rightarrow\quad C=i\frac{E}{B}.
+$$</p>
+<p>于是</p>
+<p>$$
+u(t)=-i\frac{E}{B}+i\frac{E}{B}e^{-i\Omega t}
+=i\frac{E}{B}\big(e^{-i\Omega t}-1\big).
+$$</p>
+<p>把 $e^{-i\Omega t}=\cos(\Omega t)-i\sin(\Omega t)$ 展开：</p>
+<p>$$
+e^{-i\Omega t}-1=(\cos\Omega t-1)-i\sin\Omega t.
+$$</p>
+<p>乘以 $i$：</p>
+<p>$$
+i\big(e^{-i\Omega t}-1\big)=i(\cos\Omega t-1)+\sin\Omega t
+=\sin\Omega t + i(\cos\Omega t-1).
+$$</p>
+<p>因此</p>
+<p>$$
+u(t)=\frac{E}{B}\Big(\sin\Omega t + i(\cos\Omega t-1)\Big).
+$$</p>
+<p>$$
+v_x(t)=\Re(u)=\frac{E}{B}\sin(\Omega t),\qquad
+v_y(t)=\Im(u)=\frac{E}{B}\big(\cos(\Omega t)-1\big).
+$$
+可以尝试在速度空间里画一下这个运动轨迹，大概就是一个回旋叠加上平均漂移的环形运动</p>
+<hr>
+<h4 id="会激发共振">会激发共振<a hidden class="anchor" aria-hidden="true" href="#会激发共振">#</a></h4>
+<p>⭐反射离子会往上游运动（逆着太阳风），与主流太阳风中的背景离子发生相对运动。
+这种 相对流 很容易激发不稳定性（instability）。最常见的就是 Alfvénic/ion-cyclotron 型不稳定性，于是会在上游自然产生 低频 MHD 波动。一般上游区域主要出现的反射离子不稳定性（ion/beam instability）会 preferentially 激发 Alfvén/ion-cyclotron 模式。</p>
+<p>所以被反射的粒子不会逃回太阳哈哈哈&hellip;  在上游，背景还是一个高速的太阳风流（几百 km/s），反射离子只是相对主流多了一个逆流分量。所以它们会在<strong>有限的区域</strong>和背景流发生相互作用：</p>
+<ul>
+<li>如果一个离子沿 IMF 的速度分量 小于 Alfvén 速度，那么它会被上游传播的波动追上，与背景离子发生 <strong>环波/环束不稳定性</strong>，激发 ULF 或离子回旋波。也就是在传播一段距离后，就会被背景太阳风重新&lt;卷回&gt;激波。？？</li>
+<li>如果它的速度 大于 Alfvén 速度，那么它能比 Alfvén 波更快地“跑回去”，真正进入上游，形成可持续的 beam
+$$
+v_\text{ph} = \frac{\omega}{k}
+$$
+离子和波之间存在 <strong>共振条件</strong>：</li>
+</ul>
+<p>$$
+\omega - k_\parallel v_\parallel \approx n \Omega_i
+$$</p>
+<p>（$n$ 是谐波数，常见是 $n=1$，$\Omega_i$ 是离子回旋频率）</p>
+<ul>
+<li>如果 $v_\parallel &lt; v_\text{ph}$，离子就会被波场驯服，跑不远。</li>
+<li>如果 $v_\parallel &gt; v_\text{ph}$，它们才能甩开波，真正进入上游区域，形成<strong>回流束</strong>，即backstreaming ions</li>
+</ul>
+<p>. . . . . . .   好了，现在我们假设它可以成功进入上游区域。</p>
+<p><strong>太阳风离子</strong>（主要是质子）在进入火星弓激波之前，基本上是一个准单流（quasi-mono-streaming）的分布。在速度空间里表现为：
+$$
+f(\mathbf{v}) \approx n_0 , \delta(\mathbf{v} - \mathbf{V}_{sw})
+$$
+在速度空间里，反射离子叠加到原本冷流背景上，就形成了一个 <strong>beam / ring-beam</strong> 结构。</p>
+<ul>
+<li>如果反射过程中有 pitch angle 散射，分布就会变成 <strong>环形ring</strong>。</li>
+<li>如果主要沿磁场方向，那么就是 <strong>field-aligned beam</strong>。
+$$
+f(\mathbf{v}) = f_{sw}(\mathbf{v}) + f_{beam}(\mathbf{v})
+$$
+其中
+$$
+f_{beam}(\mathbf{v}) \propto \delta(v_\parallel - v_b),\delta(v_\perp)
+$$
+或更一般的环状分布
+$$
+f_{ring}(\mathbf{v}) \propto \delta(v_\parallel - v_b),\delta(v_\perp - v_r)
+$$
+由于背景流本来几乎各向同性+窄分布，所以这类沿 IMF 方向的 beam在分布函数上显得很突出</li>
+</ul>
+<p>关于为什么共振会激发波我还不太理解，目前简单理解为： 粒子往下跑只能吸收波能量 → 阻尼（Landau damping），现在 beam 让分布函数在某方向形成“上坡” → 粒子往上跑时激发共振会把离子的能量泵进波里。</p>
+<ul>
+<li><strong>Landau 共振</strong> ($n=0$)：$\omega = k_\parallel v_\parallel$，即波相速度 = 粒子速度。</li>
+<li><strong>Cyclotron 共振</strong> ($n=\pm1$)：粒子绕磁场旋转运动和波的横向电场相位同步。</li>
+</ul>
+<p>波的增长率（quasi-linear 近似下）可以写作：</p>
+<p>$$
+\gamma \propto \sum_n \int d^3v , \delta(\omega - k_\parallel v_\parallel - n \Omega_i)
+, \Bigg[ \frac{\partial f}{\partial v_\perp} + \frac{k_\parallel v_\perp}{\omega} \frac{\partial f}{\partial v_\parallel} \Bigg]
+$$</p>
+<p>在<strong>Maxwell 分布</strong>下，$\partial f/\partial v &lt; 0$，波被阻尼。
+但在<strong>beam/ring 分布</strong>下，某个速度区间的斜率是 <strong>正的</strong> → 这就导致 $\gamma &gt; 0$，波被放大。</p>
+<ul>
+<li>δ 函数强制“共振位点”：只有满足 $\omega - k_\parallel v_\parallel - n\Omega = 0$ 的粒子会与波共振（$n$ 为回旋谐波，常以 $n=\pm1$ 的 ion-cyclotron 共振最重要）。</li>
+<li>如果在共振速度处速度分布的某些导数为正（例如 $ \partial f/\partial v_\perp &gt;0$，即在某个 $v_\perp$ 上粒子密度比周围更高），那对应项会给出 $\gamma&gt;0$ ⇒ 波增长（不稳定）。</li>
+<li>对于 ring 分布，$f(v_\perp)$ 在 $v_\perp \approx v_{\rm ring}$ 处有强峰或正斜率，因此产生离子-回旋类的增益（生成 ULF / ion-cyclotron 波或 Alfvénic 波，视 $k$ 与 plasma 参数而定）。</li>
+</ul>
+<p>详细的后续了解后再补充吧。</p>
+<h2 id="nightside">NightSide<a hidden class="anchor" aria-hidden="true" href="#nightside">#</a></h2>
+<h3 id="感应磁尾处在发生什么">感应磁尾处在发生什么<a hidden class="anchor" aria-hidden="true" href="#感应磁尾处在发生什么">#</a></h3>
+<p>在行星火星的 <strong>感应磁尾</strong> 中，太阳风与感应电流在行星夜侧形成一条长长的电流片（plasma sheet）。这个电流片里，磁场方向反向（上南下北），就像一个 <strong>反平行磁场配置</strong>，<strong>磁重联</strong>很容易发生。</p>
+<p>在理想 MHD 里，电场满足</p>
+<p>$$
+\mathbf{E} + \mathbf{v} \times \mathbf{B} = 0,
+$$</p>
+<p>再加上 Faraday 定律</p>
+<p>$$
+\frac{\partial \mathbf{B}}{\partial t} = -\nabla \times \mathbf{E},
+$$</p>
+<p>可以推出</p>
+<p>$$
+\frac{\partial \mathbf{B}}{\partial t} = \nabla \times (\mathbf{v} \times \mathbf{B}),
+$$</p>
+<blockquote>
+<p>Alfven&rsquo;s theorem, also known as the frozen-in flux theorem, states that in a perfectly conducting fluid, magnetic field lines move with the fluid without dissipation.</p></blockquote>
+<p>所以当有扩散项时，就不再遵循Alfven&rsquo;s theorem, 就会有一个非理想项出现在广义欧姆定律里：</p>
+<p>$$
+\mathbf{E} + \mathbf{v} \times \mathbf{B} = \eta \mathbf{J} - \frac{\mathbf{J}\times \mathbf{B}}{ne} - \frac{\nabla p_e}{ne} + \ldots
+$$</p>
+<p>常见的非理想项：</p>
+<ul>
+<li><strong>电阻项</strong> $\eta \mathbf{J}$：由有限电导率造成（Sweet–Parker 重联）。</li>
+<li><strong>Hall 项</strong> $-\frac{\mathbf{J}\times \mathbf{B}}{ne}$：在离子和电子动力学不同的情况下出现。</li>
+<li><strong>电子压力梯度项</strong> $-\nabla p_e / (ne)$。</li>
+<li><strong>动理学效应</strong>（有限拉莫尔半径、波粒相互作用等）。</li>
+</ul>
+<p>这就导致磁力线不再严格跟随等离子体的运动，而是<strong>允许磁通量拓扑发生变化</strong>。
+磁通绳（flux rope）里重联触发的脉动可以类比成一个非线性耦合振子系统。</p>
+<p>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.反正中间通过什么过程把尾部磁能转化为等离子体加速和波动了，当 flux rope 在磁尾中生成时，它通常伴随 突然的能量释放（来自重联过程）。这会在等离子体和磁场中激发一系列波动</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://K390svg.github.io/posts/latex-test/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>KaTeX Test</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on x"
+            href="https://x.com/intent/tweet/?text=&amp;url=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f&amp;title=&amp;summary=&amp;source=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f&title=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on whatsapp"
+            href="https://api.whatsapp.com/send?text=%20-%20https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on telegram"
+            href="https://telegram.me/share/url?text=&amp;url=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share  on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=&u=https%3a%2f%2fK390svg.github.io%2fposts%2fwaves_in_plasma%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://K390svg.github.io/">Mercury&#39;s Blogs</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
