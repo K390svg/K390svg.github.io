@@ -109,17 +109,6 @@
 &lt;p&gt;&lt;strong&gt;特征与判别&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>KaTeX Test</title>
-      <link>https://k390svg.github.io/posts/latex-test/</link>
-      <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://k390svg.github.io/posts/latex-test/</guid>
-      <description>&lt;p&gt;Here is an inline formula: $E=mc^2$&lt;/p&gt;
-&lt;p&gt;Here is a display formula:&lt;/p&gt;
-&lt;p&gt;$$
-\mathbf{w} = \frac{1}{2}(\nabla \mathbf{u} - (\nabla \mathbf{u})^T)
-$$&lt;/p&gt;</description>
-    </item>
-    <item>
       <title></title>
       <link>https://k390svg.github.io/posts/waves_in_plasma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
