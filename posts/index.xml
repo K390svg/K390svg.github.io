@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Mercury&#39;s Blogs</title>
-    <link>https://K390svg.github.io/posts/</link>
+    <link>https://K390svg.github.io/K390svg.github.io/posts/</link>
     <description>Recent content in Posts on Mercury&#39;s Blogs</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Aug 2025 09:00:00 +0800</lastBuildDate>
-    <atom:link href="https://K390svg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://K390svg.github.io/K390svg.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025_webster2025.md</title>
-      <link>https://K390svg.github.io/posts/2025_webster2025/</link>
+      <link>https://K390svg.github.io/K390svg.github.io/posts/2025_webster2025/</link>
       <pubDate>Wed, 27 Aug 2025 09:00:00 +0800</pubDate>
-      <guid>https://K390svg.github.io/posts/2025_webster2025/</guid>
+      <guid>https://K390svg.github.io/K390svg.github.io/posts/2025_webster2025/</guid>
       <description>&lt;h1 id=&#34;paper-review-statistical-characteristics-of-nighttime-ulf-waves-observed-on-the-surface-of-mars-by-insight&#34;&gt;Paper Review: Statistical Characteristics of Nighttime ULF Waves Observed on the Surface of Mars by InSight&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Webster et al. (2025)&lt;br&gt;
 &lt;strong&gt;DOI:&lt;/strong&gt; &lt;a href=&#34;https://doi.org/10.1029/2024JA033292&#34;&gt;https://doi.org/10.1029/2024JA033292&lt;/a&gt;&lt;/p&gt;
@@ -110,9 +110,9 @@
     </item>
     <item>
       <title>KaTeX Test</title>
-      <link>https://K390svg.github.io/posts/latex-test/</link>
+      <link>https://K390svg.github.io/K390svg.github.io/posts/latex-test/</link>
       <pubDate>Wed, 27 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://K390svg.github.io/posts/latex-test/</guid>
+      <guid>https://K390svg.github.io/K390svg.github.io/posts/latex-test/</guid>
       <description>&lt;p&gt;Here is an inline formula: $E=mc^2$&lt;/p&gt;
 &lt;p&gt;Here is a display formula:&lt;/p&gt;
 &lt;p&gt;$$
@@ -121,9 +121,9 @@ $$&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://K390svg.github.io/posts/waves_in_plasma/</link>
+      <link>https://K390svg.github.io/K390svg.github.io/posts/waves_in_plasma/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://K390svg.github.io/posts/waves_in_plasma/</guid>
+      <guid>https://K390svg.github.io/K390svg.github.io/posts/waves_in_plasma/</guid>
       <description>&lt;h1 id=&#34;waves-in-plasma&#34;&gt;Waves in plasma&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Ocean waves erode the coastline. Similarly, plasma waves in space near a planet may “erode” the planetary atmosphere, accelerating ionized particles to speeds above the escape velocity&lt;/p&gt;
